@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>栈 :: QiBlog</title>
+
+    
+    <link href="/css/nucleus.css?1619591172" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1619591172" rel="stylesheet">
+    <link href="/css/hybrid.css?1619591172" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619591172" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619591172" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619591172" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1619591172" rel="stylesheet">
+    <link href="/css/theme.css?1619591172" rel="stylesheet">
+    <link href="/css/tabs.css?1619591172" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1619591172" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1619591172"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/4.-data-structure/%E6%A0%88/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="https://i.postimg.cc/nh2394H7/qisir-icon.png"/>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1619591172"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619591172"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/iamqisir.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1619591172"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4.-data-structure/" title="4. Data Structure" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/4.-data-structure/">
+          4. Data Structure
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/4.-data-structure/%E6%A0%88/" title="栈" class="dd-item active">
+        <a href="/4.-data-structure/%E6%A0%88/">
+        栈
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-algorithm/" title="3. Algorithm" class="dd-item
+        
+        
+        
+        ">
+      <a href="/3.-algorithm/">
+          3. Algorithm
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="基础排序算法" class="dd-item ">
+        <a href="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        基础排序算法
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-data-analysis/" title="2. Data Analysis" class="dd-item
+        
+        
+        
+        ">
+      <a href="/2.-data-analysis/">
+          2. Data Analysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/" title="Pandas基础" class="dd-item ">
+        <a href="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/">
+        Pandas基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/" title="Numpy基础" class="dd-item ">
+        <a href="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/">
+        Numpy基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-life-sharing/" title="1. Life Sharing" class="dd-item
+        
+        
+        
+        ">
+      <a href="/1.-life-sharing/">
+          1. Life Sharing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/" title="我的开场白" class="dd-item ">
+        <a href="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/">
+        我的开场白
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>数据分析基础</a> > <a href='/4.-data-structure/'>4. Data Structure</a> > 栈
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              栈
+            </h1>
+          
+
+        
+
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/4.-data-structure/" title="4. Data Structure"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/3.-algorithm/" title="3. Algorithm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1619591172"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619591172"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619591172"></script>
+    <script src="/js/jquery.sticky.js?1619591172"></script>
+    <script src="/js/featherlight.min.js?1619591172"></script>
+    <script src="/js/highlight.pack.js?1619591172"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619591172"></script>
+    <script src="/js/learn.js?1619591172"></script>
+    <script src="/js/hugo-learn.js?1619591172"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1619591172"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

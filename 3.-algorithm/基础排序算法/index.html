@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>基础排序算法 :: QiBlog</title>
+
+    
+    <link href="/css/nucleus.css?1619591172" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1619591172" rel="stylesheet">
+    <link href="/css/hybrid.css?1619591172" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619591172" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619591172" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619591172" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1619591172" rel="stylesheet">
+    <link href="/css/theme.css?1619591172" rel="stylesheet">
+    <link href="/css/tabs.css?1619591172" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1619591172" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1619591172"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="https://i.postimg.cc/nh2394H7/qisir-icon.png"/>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1619591172"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619591172"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/iamqisir.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1619591172"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4.-data-structure/" title="4. Data Structure" class="dd-item
+        
+        
+        
+        ">
+      <a href="/4.-data-structure/">
+          4. Data Structure
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/4.-data-structure/%E6%A0%88/" title="栈" class="dd-item ">
+        <a href="/4.-data-structure/%E6%A0%88/">
+        栈
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-algorithm/" title="3. Algorithm" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/3.-algorithm/">
+          3. Algorithm
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="基础排序算法" class="dd-item active">
+        <a href="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        基础排序算法
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-data-analysis/" title="2. Data Analysis" class="dd-item
+        
+        
+        
+        ">
+      <a href="/2.-data-analysis/">
+          2. Data Analysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/" title="Pandas基础" class="dd-item ">
+        <a href="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/">
+        Pandas基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/" title="Numpy基础" class="dd-item ">
+        <a href="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/">
+        Numpy基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-life-sharing/" title="1. Life Sharing" class="dd-item
+        
+        
+        
+        ">
+      <a href="/1.-life-sharing/">
+          1. Life Sharing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/" title="我的开场白" class="dd-item ">
+        <a href="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/">
+        我的开场白
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>数据分析基础</a> > <a href='/3.-algorithm/'>3. Algorithm</a> > 基础排序算法
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-冒泡排序">1. 冒泡排序</a>
+      <ul>
+        <li><a href="#1-原理">1. 原理</a></li>
+        <li><a href="#2-实现">2. 实现</a></li>
+        <li><a href="#3-性能分析待补充">3. 性能分析(待补充)</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-选择排序">2. 选择排序</a>
+      <ul>
+        <li><a href="#1-原理-1">1. 原理</a></li>
+        <li><a href="#2实现">2.实现</a></li>
+        <li><a href="#3性能分析待补充">3.性能分析（待补充）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3插入排序">3.插入排序</a>
+      <ul>
+        <li><a href="#1-基本原理">1. 基本原理</a></li>
+        <li><a href="#2-实现-1">2. 实现</a></li>
+        <li><a href="#3-性能分析待补充-1">3. 性能分析（待补充）</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-希尔排序">4. 希尔排序</a>
+      <ul>
+        <li><a href="#1-原理-2">1. 原理</a></li>
+        <li><a href="#2-实现-2">2. 实现</a></li>
+        <li><a href="#3-性能分析待补充-2">3. 性能分析（待补充）</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-归并排序">5. 归并排序</a>
+      <ul>
+        <li><a href="#1-基础概念">1. 基础概念</a></li>
+        <li><a href="#2-原理">2. 原理</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              基础排序算法
+            </h1>
+          
+
+        
+
+
+<h1 id="常见排序算法">常见排序算法</h1>
+<p><strong>正在施工！</strong></p>
+<p>这个博客记录着我学习Algorithm 4th的一些心得或者说总结，将会持续更新下去</p>
+<p><strong>我们为什么要学习排序算法呢？</strong></p>
+<p>排序就是将一组对象按照某种逻辑顺序重新排列的过程，在平时编程中虽然往往不需要自己写排序算法（编程语言往往都封装了优秀的排序算法），但是学习排序算法还是十分有意义的：</p>
+<ol>
+<li>对排序算法的分析有助于理解其他比较算法性能的方法</li>
+<li>类似的技术可用于解决其他的问题（举一反三）</li>
+<li>排序往往是我们解决其他问题的第一步骤</li>
+</ol>
+<hr>
+<p><strong>一些预备知识：</strong></p>
+<ol>
+<li><strong>需要注意的是，默认的排序是指将数组按升序排序</strong></li>
+<li><strong>主键：可以这样理解，一个对象可能有多个属性，但我们只看重要的那个。比如一个学生有三门成绩（语数英），但我们现在想通过数学成绩排序，那么数学成绩可以理解为主键。也就是说主键是我们要比较的东西</strong></li>
+<li><strong>在Java中，对象的比较可以通过实现Comparable接口或Comparator来实现，在这个文章中默认比较的对象都实现了Comparable，并使用Comparable数组的方式来代表（这个涉及到接口类型变量的知识，可以简单理解为Comparable a = b代表着b是一个实现了Comparable接口的对象，其可进行比较）</strong>。</li>
+<li><strong>算法的稳定性是指主键相同的数组元素在排序前后它们的相对次序不会发生变化</strong></li>
+</ol>
+<hr>
+<h2 id="1-冒泡排序">1. 冒泡排序</h2>
+<h3 id="1-原理">1. 原理</h3>
+<p>冒泡排序是很简单的排序方法，它的<strong>核心思想就是“落井下石”</strong>，意思就是依次将主键最大（对于单纯的数字而言就是就数值更大的意思）的元素沉到最后，而较小的元素会不断上浮，就像石头砸进水中沉底而气泡漂浮一样，这也是冒泡排序名字的由来（个人理解）。另外冒泡排序注重与元素本身（看到选择排序时你会注意到不同）</p>
+<p>冒泡排序通过不断交换不符合顺序的相邻元素来实现排序，其每次均会通过比较找到最大的元素并将其落到最后一位。当最后一个元素落到数组头时，排序自然而然就成功了。</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="2-实现">2. 实现</h3>
+<p>冒泡排序伪代码：</p>
+<hr>
+<p><strong>BubbleSort：</strong></p>
+<p><strong>Loop (i: From 0 to N-1):</strong></p>
+<p>​	<strong>Loop (j: From 0 to N-i-1):</strong></p>
+<p>​		<strong>if arr[j+1]  &lt; arr[j]:</strong></p>
+<p>​			<strong>交换arr[j+1]与arr[j]</strong></p>
+<hr>
+<p>==疑问：==</p>
+<p>当然你会发现一个问题，外层循环的次数是固定的（没错，就是N次），如果在N次之前数组已经有序了呢？那我们岂不是浪费了大量的时间？（可以极端地假设原数组就是有序的，那么我们其实在接下来的N次大循环中什么也没做）我们可以设置一个额外的布尔变量flag来记录是否发生了交换（如果发生了交换那么flag保持为false，如果未发生交换flag就变为true），也就是我们在大循环上加入一个判断，如果flag为true就退出循环，伪代码如下:</p>
+<hr>
+<p><strong>BubbleSort：</strong></p>
+<p><strong>bool flag =false</strong></p>
+<p><strong>Loop (i: From 0 To N-1):</strong></p>
+<p>​	  <strong>if !flag:</strong></p>
+<p>​		  <strong>Loop (j: From 0 To N-i-1):</strong></p>
+<p>​			  <strong>if arr[j+1]  &lt; arr[j]:</strong></p>
+<p>​         		   <strong>交换arr[j+1]与arr[j]</strong></p>
+<p>​				    <strong>flag = true</strong></p>
+<p>​	  <strong>else: 直接退出</strong></p>
+<p>//但是这样改进之后可能会为我们之后的性能分析带来一定困难</p>
+<hr>
+<p>下面给出java语言版本的实现并给出基本测试</p>
+<p><strong>冒泡排序Java实现</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.qisir.pku.algorithm.sort<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bubble</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">//初级冒泡排序实现
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span>
+				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]))</span>
+					exch<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> j<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> j<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//优化的冒泡排序（优化后性能还是很低）
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//i所在的外层循环一定会完全走完，但是有可能在i次之前就已排序完毕（标志是i-1次未发生任何交换）
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//通过boolean变量flag来判断是否存在交换，若已不存在，就退出，降低时间复杂度
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">advancedSort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">boolean</span> flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+			flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]))</span> <span style="color:#f92672">{</span>
+					exch<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> j<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> j<span style="color:#f92672">);</span>
+					flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+				<span style="color:#f92672">}</span>
+			<span style="color:#f92672">}</span>
+			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>flag<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span> 
+	    <span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">// 比较两可比较对象，返回v是否小于w
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">less</span><span style="color:#f92672">(</span>Comparable v<span style="color:#f92672">,</span> Comparable w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> v<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>w<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//交换被排序数组中两个元素
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exch</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Comparable t <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//输出数组内容
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//检查数组是否已经按从小到大的顺序排列
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSorted</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+    <span style="color:#75715e">//简单地测试冒泡排序
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Random random <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random<span style="color:#f92672">();</span>
+		Comparable<span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Comparable<span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>  <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		sort<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><hr>
+<h3 id="3-性能分析待补充">3. 性能分析(待补充)</h3>
+<p>平均时间复杂度: O(N^2^)
+最差时间复杂度: O(N^2^)
+最优时间复杂度: O(N)
+空间复杂度: O(1)
+排序方式: 内部排序（inplace）
+稳定性: 稳定</p>
+<h2 id="2-选择排序">2. 选择排序</h2>
+<h3 id="1-原理-1">1. 原理</h3>
+<p>选择排序的<strong>核心思想是”能者优先“</strong>， 也就是说我们每次从余下的全部元素中选出最小的并放在合适的位置上。选在排序注重于位置，我们每次都是为一个位置选择适合该位置的元素。</p>
+<p>选择排序通过为第i个位置选出第i大的元素完成排序。</p>
+<h3 id="2实现">2.实现</h3>
+<p><strong>选择排序伪代码</strong></p>
+<hr>
+<p><strong>SelectionSort:</strong></p>
+<p><strong>Loop (i: From 0 To N-1):</strong></p>
+<p>​	  <strong>set min = i</strong></p>
+<p>​	  <strong>Loop (j: From i DownTo N-1):</strong></p>
+<p>​		  <strong>if arr[j] &gt; arr[min]:</strong></p>
+<p>​			  <strong>min = j</strong></p>
+<p>​	  <strong>交换arr[i]与arr[min]</strong></p>
+<hr>
+<p>当然有同学会意识到如果要找的元素就在恰当位置上那么我们会做原地交换，这样可能浪费了一定的性能。可以通过判断min是否与i相等，如果相等就不需要交换了。这个想法确实会有一定帮助，但是这样会导致对选择排序性能的分析变得更困难（因为性能与输入有关联了），而且这种改动可能仅仅优化了常数级别（也就是说如果原算法性能不够了，这种优化也并不会起作用，我们会选择更高级的排序算法）</p>
+<p>像C.A.R. Hoare（快速排序发明人，以为算法界的领军人物）所说：”不成熟的优化是所有罪恶之源“，在优化之前我们要深思熟虑，全面地考虑改动所带来的影响。</p>
+<p><strong>选择排序Java实现</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.qisir.pku.algorithm.sort<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Selection</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span>1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>min<span style="color:#f92672">]))</span> 
+					min <span style="color:#f92672">=</span> j<span style="color:#f92672">;</span>
+			<span style="color:#f92672">}</span>
+        exch<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> min<span style="color:#f92672">);</span> 
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">// 比较两可比较对象，返回v是否小于w
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">less</span><span style="color:#f92672">(</span>Comparable v<span style="color:#f92672">,</span> Comparable w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> v<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>w<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//交换被排序数组中两个元素
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exch</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Comparable t <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//输出数组内容
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//检查数组是否已经按从小到大的顺序排列
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSorted</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+    <span style="color:#75715e">//简单地测试
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Random random <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random<span style="color:#f92672">();</span>
+		Comparable<span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Comparable<span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>  <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		sort<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><h3 id="3性能分析待补充">3.性能分析（待补充）</h3>
+<p>平均时间复杂度: O(N^2^)
+最差时间复杂度: O(N^2^)
+最优时间复杂度: O(N^2^)
+空间复杂度: O(1)
+排序方式: 内部排序（inplace）
+稳定性: 不稳定（使用数组实现）、稳定（使用链表实现）（但是默认情况都是对数组排序，因此可认为其不稳定）</p>
+<h2 id="3插入排序">3.插入排序</h2>
+<p>插入排序是初级排序算法中最重要的一个，因为它可以不仅可以<strong>作为更高级算法的一个步骤</strong>（希尔排序，可以将其理解为优化的插入排序），还可以<strong>对其他高级排序算法进行优化</strong>（因为对于小数组排序，插入排序速度很快，可将其作为优化快速排序的一个手段）。因此，插入排序的学习是十分重要的。</p>
+<h3 id="1-基本原理">1. 基本原理</h3>
+<p>![poker](E:\Qisir\Pictures\Saved Pictures\poker.png)</p>
+<p>通过一个简单的例子了解插入排序，比如说上述扑克牌为你的手牌，现在你摸到了一张A（也就是6的右侧是A），你该如何整理这几张牌呢？先将A与6比，A比6要小，故调换两者的顺序，依次下去直到A到合适的位置（在这里是最左侧）。（这是最初级的插入排序的理解，后面会有优化的方法）</p>
+<p>插入排序的<strong>基本原理可以概括为”黑白分明“</strong>，这是对插入排序过程中数组元素特点的形象概括。插入排序通过将每个元素与之前的元素进行比较，若两者顺序错误则互换，并依次进行下去，直到其处于“正确”的位置。==需要注意的是，这个正确是相对的，也就是说这个元素位置现在确实正确，但排序继续进行下去它的位置可能会变，这与选择排序不同，选择排序的正确位置就是最终位置。== 由此造成的结果是，选择排序过程中数组被一分为二：有序（左侧）与未排序区（右侧），正所谓黑白分明。</p>
+<h3 id="2-实现-1">2. 实现</h3>
+<p>插入排序伪代码：</p>
+<hr>
+<p><strong>InsertionSort:</strong></p>
+<p><strong>Loop (i: From 1 To N-1): //这里注意一下是从1开始，前面的排序算法是从0开始，因为插入排序是从后往前比的</strong></p>
+<p>​	  <strong>Loop (j: From i To 1)</strong>:</p>
+<p>​		    <strong>if arr[j] &lt; arr[j-1]:</strong></p>
+<p>​			    <strong>交换arr[j]与arr[j-1]</strong></p>
+<hr>
+<p>有的同学可能会发现，伪代码可能存在严重缺陷，如果已经交换好了，可是j仍是会继续减小直到0，这样岂不是产生了很大的浪费？我们可以像冒泡排序的不成熟改进一样引入一个bool变量来解决这个问题，但是这样改的话对于其性能的分析可能会带来麻烦（<strong>这个存在争议）</strong>，而且这个改进带来的进步可能不值得这样做。</p>
+<p><strong>插入排序的java实现</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.qisir.pku.algorithm.sort<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Insertion</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span> j <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">]);</span> j<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+				exch<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> j<span style="color:#f92672">,</span> j<span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">// 这样可能会起到一定的优化作用，但可能不值得这样做，因为收益太小
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">advancedSort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">boolean</span> flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span> j <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> flag<span style="color:#f92672">;</span> j<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">]))</span>
+					flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+				<span style="color:#66d9ef">else</span>
+				    exch<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> j<span style="color:#f92672">,</span> j<span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">// 比较两可比较对象，返回v是否小于w
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">less</span><span style="color:#f92672">(</span>Comparable v<span style="color:#f92672">,</span> Comparable w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> v<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>w<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//交换被排序数组中两个元素
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exch</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Comparable t <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//输出数组内容
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//检查数组是否已经按从小到大的顺序排列
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSorted</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+    <span style="color:#75715e">//简单的测试
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Random random <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random<span style="color:#f92672">();</span>
+		Comparable<span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Comparable<span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>  <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		advancedSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><h3 id="3-性能分析待补充-1">3. 性能分析（待补充）</h3>
+<p>最佳时间复杂度</p>
+<p>最差时间复杂度</p>
+<p>平均时间复杂度</p>
+<p>空间复杂度</p>
+<p>稳定性</p>
+<p><strong>插入排序优点</strong></p>
+<p>在被排序数组被<strong>部分有序数组</strong>时，插入排序效率很高。在后面，我们会看到其优点的有效性。</p>
+<p>部分有序数组：当数组元素的逆序数为数组长度的常数倍时，称该数组为部分有序数组，常见的部分有序数组如下：</p>
+<ol>
+<li>数组中每个元素距离最终位置不远</li>
+<li>一个大的有序数组连接一个小数组</li>
+<li>数组中只有几个元素的位置不确定</li>
+</ol>
+<p><strong>插入排序缺点</strong></p>
+<p>（待补充）</p>
+<h2 id="4-希尔排序">4. 希尔排序</h2>
+<p>希尔排序是建立在插入排序上的，可以说是升级版的插入排序。其有效地解决了插入排序的缺点，是一个实现相对简单的高级排序算法，甚至有专家建议，如果你需要解决一个排序问题又没有系统排序函数可用，可以先用希尔排序，然后再考虑是否替换为更加复杂的算法。</p>
+<h3 id="1-原理-2">1. 原理</h3>
+<p>插入排序的局限性在于其只能交换相邻元素，如果目标元素与其适当位置离得非常远，这样的效率会非常低，我们仍是得一个个交换元素。希尔排序则是在交换元素的方式上做了一些改变。<strong>希尔排序通过交换不相邻元素以对数组的局部进行排序，并最终用插入排序将局部有序数组排序。</strong></p>
+<p><img src="E:%5CQisir%5CPictures%5CSnipaste%5CSnipaste_2021-04-15_20-03-14.png" alt="Snipaste_2021-04-15_20-03-14"></p>
+<p><strong>希尔排序的核心思想是是数组中任意间隔为h的元素都是有序的</strong>，（当h较大时，能够实现相隔较远元素间的交换，h逐渐减小到1，当h为1时，数组自然就是有序的了。）可以概括为**“细致入微”**。</p>
+<h4 id="重要的概念">重要的概念</h4>
+<p><strong>h有序数组：</strong> 数组中间隔为h的数组元素都是有序的。可以将其理解为是h个相互独立的的有序数组**“编织”**（注意这个编织）而成。</p>
+<p><img src="E:%5CQisir%5CPictures%5CSnipaste%5CSnipaste_2021-04-15_20-11-46.png" alt="Snipaste_2021-04-15_20-11-46"></p>
+<p>**递增序列：**我们在上面提到h会从某个值逐渐降低至1，其实h是有说道的。任何一个首项为1的递增序列都对应着一个h，序列的选取会影响到希尔排序的效率，不过这是专家的工作了。（具体的递增序列会在代码中体现）</p>
+<h3 id="2-实现-2">2. 实现</h3>
+<p>希尔排序伪代码</p>
+<hr>
+<p><strong>ShellSort:</strong></p>
+<p><strong>set h = 1</strong></p>
+<p><strong>//选定合适的h: 首先把h升高到极限</strong></p>
+<p><strong>while h &lt; arr.length / 3:</strong></p>
+<p>​	*<em>h = 3 <em>h + 1   //这就是之间提到的递增序列之一，这是书上推荐的一个</em></em></p>
+<p><strong>// 排序的主要流程</strong></p>
+<p><strong>while ( h &gt;= 1):</strong></p>
+<p>​	<strong>Loop (i: From h To N):</strong></p>
+<p>​		<strong>Loop (j: From i DownTo h; By h):</strong></p>
+<p>​				<strong>if arr[j] &lt; arr[j - h]:</strong></p>
+<p>​					<strong>交换arr[j]与arr[j-h]</strong></p>
+<p>​		<strong>h = h/3</strong></p>
+<hr>
+<p>希尔排序Java实现</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.qisir.pku.algorithm.sort<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">//希尔排序可以认为是插入排序的推广
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Shell</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> h <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>h <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> h <span style="color:#f92672">=</span> 3<span style="color:#f92672">*</span>h <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>h <span style="color:#f92672">&gt;=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> h<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+				<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span> j <span style="color:#f92672">&gt;=</span> h <span style="color:#f92672">&amp;&amp;</span> less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>j<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">-</span>h<span style="color:#f92672">]);</span> j <span style="color:#f92672">-=</span> h<span style="color:#f92672">)</span>
+					exch<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> j<span style="color:#f92672">,</span> j<span style="color:#f92672">-</span>h<span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span>
+			h <span style="color:#f92672">/=</span> 3<span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+	<span style="color:#75715e">// 比较两可比较对象，返回v是否小于w
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">less</span><span style="color:#f92672">(</span>Comparable v<span style="color:#f92672">,</span> Comparable w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> v<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>w<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//交换被排序数组中两个元素
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exch</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Comparable t <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+		arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//输出数组内容p
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#75715e">//检查数组是否已经按从小到大的顺序排列
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSorted</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Random random <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random<span style="color:#f92672">();</span>
+		Comparable<span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Comparable<span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+			arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>  <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		sort<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+		show<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+	
+<span style="color:#f92672">}</span>
+
+</code></pre></div><h3 id="3-性能分析待补充-2">3. 性能分析（待补充）</h3>
+<h2 id="5-归并排序">5. 归并排序</h2>
+<h3 id="1-基础概念">1. 基础概念</h3>
+<p>在这里会详细介绍两种归并排序：自顶向下的归并排序和自底向上的归并排序。归并排序，从它的名字上就知道这种排序方法与<strong>归并</strong>操作有关。</p>
+<p><strong>归并操作</strong>：归并指的是将两个<strong>有序数组</strong>归并成一个<strong>更大的有序数组</strong>。</p>
+<p>这里需要注意：归并操作会生成一个更大的数组，这个数组可以是我们新建的数组，也可以是原数组。你可能会比较奇怪，更大的有序数组怎么可能是自身呢？其实归并操作可以发生在一个数组的两半，我们称之为<strong>原地归并</strong>，也就是在原地进行的归并操作（事实上我们借助了辅助数组）</p>
+<p><strong>原地归并的抽象方法java实现</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//注意，这段代码只是展示了归并操作的原理，其需要其他代码配合使用（见完全实现的归并排序）
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> lo<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> mid<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> hi<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> lo<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+		<span style="color:#75715e">//先把数组复制到辅助数组里面，辅助数组的初始化在另一个方法里
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> lo<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;=</span> hi<span style="color:#f92672">;</span> k<span style="color:#f92672">++)</span>
+		aux<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>k<span style="color:#f92672">];</span> 
+		
+	<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> lo<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;=</span> hi<span style="color:#f92672">;</span> k<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span> mid<span style="color:#f92672">)</span> arr<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>j<span style="color:#f92672">++];</span>
+		<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;</span> hi<span style="color:#f92672">)</span> arr<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>i<span style="color:#f92672">++];</span>
+		<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>aux<span style="color:#f92672">[</span>j<span style="color:#f92672">],</span> aux<span style="color:#f92672">[</span>i<span style="color:#f92672">]))</span> arr<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>j<span style="color:#f92672">++];</span>
+		<span style="color:#66d9ef">else</span> arr<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>i<span style="color:#f92672">++];</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>归并操作的核心就在原地归并上。</strong></p>
+<h3 id="2-原理">2. 原理</h3>
+<p>归并排序是通过</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/3.-algorithm/" title="3. Algorithm"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2.-data-analysis/" title="2. Data Analysis" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1619591173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619591173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619591173"></script>
+    <script src="/js/jquery.sticky.js?1619591173"></script>
+    <script src="/js/featherlight.min.js?1619591173"></script>
+    <script src="/js/highlight.pack.js?1619591173"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619591173"></script>
+    <script src="/js/learn.js?1619591173"></script>
+    <script src="/js/hugo-learn.js?1619591173"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1619591173"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

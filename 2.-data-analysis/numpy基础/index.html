@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Numpy基础 :: QiBlog</title>
+
+    
+    <link href="/css/nucleus.css?1619591172" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1619591172" rel="stylesheet">
+    <link href="/css/hybrid.css?1619591172" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619591172" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619591172" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619591172" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1619591172" rel="stylesheet">
+    <link href="/css/theme.css?1619591172" rel="stylesheet">
+    <link href="/css/tabs.css?1619591172" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1619591172" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1619591172"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="https://i.postimg.cc/nh2394H7/qisir-icon.png"/>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1619591172"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619591172"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/iamqisir.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1619591172"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4.-data-structure/" title="4. Data Structure" class="dd-item
+        
+        
+        
+        ">
+      <a href="/4.-data-structure/">
+          4. Data Structure
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/4.-data-structure/%E6%A0%88/" title="栈" class="dd-item ">
+        <a href="/4.-data-structure/%E6%A0%88/">
+        栈
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-algorithm/" title="3. Algorithm" class="dd-item
+        
+        
+        
+        ">
+      <a href="/3.-algorithm/">
+          3. Algorithm
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="基础排序算法" class="dd-item ">
+        <a href="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        基础排序算法
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-data-analysis/" title="2. Data Analysis" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/2.-data-analysis/">
+          2. Data Analysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/" title="Pandas基础" class="dd-item ">
+        <a href="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/">
+        Pandas基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/" title="Numpy基础" class="dd-item active">
+        <a href="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/">
+        Numpy基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-life-sharing/" title="1. Life Sharing" class="dd-item
+        
+        
+        
+        ">
+      <a href="/1.-life-sharing/">
+          1. Life Sharing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/" title="我的开场白" class="dd-item ">
+        <a href="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/">
+        我的开场白
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>数据分析基础</a> > <a href='/2.-data-analysis/'>2. Data Analysis</a> > Numpy基础
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ndarray对象基础">ndarray对象基础</a>
+      <ul>
+        <li><a href="#numpy数组的基本知识">numpy数组的基本知识</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组的基本操作">数组的基本操作</a>
+      <ul>
+        <li><a href="#运算的前提广播与广播机制umm不太熟">运算的前提——广播与广播机制（umm……不太熟）</a></li>
+        <li><a href="#算数基本操作">算数基本操作</a></li>
+        <li><a href="#索引与切片花式索引布尔索引-需要更多的练习">索引与切片（花式索引、布尔索引）—— 需要更多的练习</a></li>
+        <li><a href="#数组迭代">数组迭代</a></li>
+        <li><a href="#数组筛选与bool数组">数组筛选与bool数组</a></li>
+        <li><a href="#数组的形状变换">数组的形状变换</a></li>
+        <li><a href="#数组切分">数组切分</a></li>
+        <li><a href="#数组拷贝">数组拷贝</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组数据文件的读写">数组数据文件的读写</a></li>
+    <li><a href="#random库">random库</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Numpy基础
+            </h1>
+          
+
+        
+
+
+<h1 id="basic-numpy">Basic Numpy</h1>
+<p><strong>正在施工，有很多地方正待完善</strong></p>
+<h2 id="ndarray对象基础">ndarray对象基础</h2>
+<p>什么是ndarray对象？即是N-dimentional array，也就是n维数组对象。</p>
+<p>指定ndarray类型的对象——dtype（data type，就是n维数组对象内的基本元素类型）</p>
+<h3 id="numpy数组的基本知识">numpy数组的基本知识</h3>
+<h4 id="数组的基本属性">数组的基本属性</h4>
+<ol>
+<li><strong>shape属性，即是数组的形状，用元组来描述（储存着几行几列的信息）</strong></li>
+<li><strong>axis属性，即是数组的轴，有0、1、2……轴（在参数列表中的axis代表着以哪个轴作为基准）</strong></li>
+<li><strong>ndim属性，即是数组的维数，用元组来表示（其实就是反映数组有几个轴）</strong></li>
+<li><strong>size属性，返回数组的长度（就是看数组里面一共有多少基本元素，不要与len()函数返回值混淆，len与ndim返回值一致）</strong></li>
+<li>dtype属性，即是数组元素的类型（也可以在外面直接创造复杂dtype类型，并把它与一个变量绑定，可以节省代码量）</li>
+<li>itemsize属性，即是数组中每个元素的长度（以字节形式表示）</li>
+</ol>
+<hr>
+<h4 id="数据类型主要在结构化数组中应用">数据类型（主要在结构化数组中应用）</h4>
+<h5 id="全部数据类型">全部数据类型</h5>
+<p>见 <em><strong>Python Data Analysis</strong></em> P34，不过一般很少使用</p>
+<h5 id="结构化数组中的数据类型">结构化数组中的数据类型</h5>
+<table>
+<thead>
+<tr>
+<th>bytes</th>
+<th>b1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>i1, i2, i4, i8</td>
+</tr>
+<tr>
+<td>usigned ints</td>
+<td>u1, u2, u4, u8</td>
+</tr>
+<tr>
+<td>floats</td>
+<td>f2, f4, f8</td>
+</tr>
+<tr>
+<td>complex</td>
+<td>c8, c16</td>
+</tr>
+<tr>
+<td>fixed length strings</td>
+<td>a<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p><strong>可以通过type函数来查看元素类型</strong>或查看ndarray的dtype属性</p>
+<p><strong>特殊的对象np.nan</strong>，nan的含义是not a number，其本身是属于np.float类型，但是！任何nan参与的运算都会变成nan！一定要注意。而且np.nan == np.nan始终为False（这个可以理解为nan是所有不是数东西的一个，没办法比较，就返回False）</p>
+<hr>
+<h4 id="创建数组包含特殊数组创建">创建数组（包含特殊数组创建）</h4>
+<ol>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]) 
+<span style="color:#75715e">#array接收序列参数，通常用list, tuple（且他们地位等价，即互相嵌套可以换位）</span>
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>) 
+   <span style="color:#75715e">#arange在给定范围内生成一个一维数组，为闭开区间，为比较常用的方法。</span>
+   <span style="color:#75715e">#接收一个参数时默认从0开始，数字型参数-初始，结束，步长（步长可以为小数，与range不同，这十分特殊！！！！！）</span>
+   <span style="color:#75715e"># 记住reshape函数！！！即可接收元组也可直接接受元组内的参数，通常使用</span>
+   c <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">16</span>)<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)) 
+   <span style="color:#75715e">#reshape方法可以返回一个按参数指定形状的多维数组</span>
+   np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">16</span>)<span style="color:#f92672">.</span>resize((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)) 
+   <span style="color:#75715e">#resize方法与reshape方法的不同之处在于resize直接修改原对象，但是resize并不常用，我们希望对象更安全</span>
+   <span style="color:#75715e">#但是reshape产生的新视图，其实是一个引用，即使两者形状不一样，但是他们指向内存的同一块区域，如果要更改其中之一，请使用    #copy函数来避免这种事情发生, 另外resize有两种方式，np.resize(arr, size)与obj.resize(shape), 第一种通过返回值修改，</span>
+<span style="color:#75715e">#第二种通过直接修改原数据来实现这一目的</span>
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>) 
+    <span style="color:#75715e">#linspace函数接收：起始，结束，份数。它与arange相对应，只不过第三个参数从步长变为了份数</span>
+    <span style="color:#75715e">#其余像与shape, reshape方法的配合与arange一直（本质是对对象应用，只不过它们通常成对出现）</span>
+    <span style="color:#75715e"># 其实linspace与arange是一样的，只不过使用的方式略有区别而已</span>
+    <span style="color:#75715e"># linspace中的重要参数，restep（导致linspace返回一个元组，前半部分是生成的array，后部分是步长），linspace与arange的不同之处在于</span>
+    <span style="color:#75715e">#linspace默认包括右端而arange并不是，可以通过将endpoint设置为False，就可不取右端点</span>
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#75715e">#快速创建特殊数组</span>
+ <span style="color:#75715e"># 注意！zeros、ones、random只能接收元组类参数！注意与reshape、shape区别！</span>
+   <span style="color:#75715e"># 零数组</span>
+   np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>))
+   array([[<span style="color:#ae81ff">0.</span>, <span style="color:#ae81ff">0.</span>, <span style="color:#ae81ff">0.</span>],
+          [<span style="color:#ae81ff">0.</span>, <span style="color:#ae81ff">0.</span>, <span style="color:#ae81ff">0.</span>],
+          [<span style="color:#ae81ff">0.</span>, <span style="color:#ae81ff">0.</span>, <span style="color:#ae81ff">0.</span>]])
+   <span style="color:#75715e">#zeros_like函数！跟ones_like一模一样</span>
+      
+   <span style="color:#75715e">#一数组</span>
+   np<span style="color:#f92672">.</span>ones((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>))
+   array([[<span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">1.</span>],
+          [<span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">1.</span>],
+          [<span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">1.</span>]])
+   arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+   <span style="color:#75715e"># one_like函数！可以根据已有数组的形状创建一数组</span>
+   np<span style="color:#f92672">.</span>ones_like(arr)
+      
+   <span style="color:#75715e">#随机数组</span>
+   np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>))
+   array([[<span style="color:#ae81ff">0.23159009</span>, <span style="color:#ae81ff">0.63306642</span>, <span style="color:#ae81ff">0.63343724</span>],
+          [<span style="color:#ae81ff">0.2765953</span> , <span style="color:#ae81ff">0.57742195</span>, <span style="color:#ae81ff">0.3329211</span> ],
+          [<span style="color:#ae81ff">0.02730095</span>, <span style="color:#ae81ff">0.86618645</span>, <span style="color:#ae81ff">0.98329664</span>]])
+       
+   <span style="color:#75715e"># 创建一个空数组（随机分配的垃圾值），其中的元素是未被初始化的！！！</span>
+   np<span style="color:#f92672">.</span>empty((<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))
+   np<span style="color:#f92672">.</span>empty_like(arr)
+      
+   <span style="color:#75715e"># 最一般的特殊数组创建函数！full函数</span>
+   np<span style="color:#f92672">.</span>full(((<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">7.1</span>))
+   <span style="color:#75715e"># 创建一个2x3的7.1充满的数组</span>
+   np<span style="color:#f92672">.</span>full_like(arr, <span style="color:#ae81ff">7.1</span>)
+   <span style="color:#75715e">#请注意，full_like函数在填充时会根据arr内类型进行类型转换，比如arr的数据类型原来为int型，会将7.1变为7</span>
+       
+   <span style="color:#75715e">#创建diagnal（一般是主对角线）</span>
+   np<span style="color:#f92672">.</span>eye(<span style="color:#ae81ff">5</span>)
+[[<span style="color:#ae81ff">1.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span>]
+ [<span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">1.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span>]
+ [<span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">1.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span>]
+ [<span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">1.</span> <span style="color:#ae81ff">0.</span>]
+ [<span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">0.</span> <span style="color:#ae81ff">1.</span>]]
+   
+  eye的k参数<span style="color:#960050;background-color:#1e0010">，正数代表向右平移，负数代表向左平移（是指主对角线漂移）</span>
+      M参数就是上例输入的5<span style="color:#960050;background-color:#1e0010">，代表行数，</span>N参数代表列数<span style="color:#960050;background-color:#1e0010">，默认与</span>M相同
+  <span style="color:#75715e"># 通过已有数组创建元素类型不同的数组</span>
+  arr <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float)
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#创建结构化数组示例</span>
+<span style="color:#75715e"># 我可能想复杂了，其实往往不需要在后面写生dtype，除非有特殊需求</span>
+   
+structured <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;First&#39;</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2j</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Second&#39;</span>, <span style="color:#ae81ff">1.3</span>, <span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2j</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Third&#39;</span>, <span style="color:#ae81ff">0.8</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">3j</span>)], 
+                      dtype<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;id&#39;</span>, <span style="color:#e6db74">&#39;i2&#39;</span>), (<span style="color:#e6db74">&#39;position&#39;</span>, <span style="color:#e6db74">&#39;a6&#39;</span>), (<span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;f4&#39;</span>), (<span style="color:#e6db74">&#39;complexs&#39;</span>, <span style="color:#e6db74">&#39;c8&#39;</span>)])
+<span style="color:#75715e">#这样就可以通过像字典一样的形式来操作结构化数组</span>
+array([(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;First&#39;</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">1.</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2.j</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;Second&#39;</span>, <span style="color:#ae81ff">1.3</span>, <span style="color:#ae81ff">2.</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2.j</span>),
+       (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;Third&#39;</span>, <span style="color:#ae81ff">0.8</span>, <span style="color:#ae81ff">1.</span><span style="color:#f92672">+</span><span style="color:#ae81ff">3.j</span>)],
+      dtype<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;id&#39;</span>, <span style="color:#e6db74">&#39;&lt;i2&#39;</span>), (<span style="color:#e6db74">&#39;position&#39;</span>, <span style="color:#e6db74">&#39;S6&#39;</span>), (<span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;&lt;f4&#39;</span>), (<span style="color:#e6db74">&#39;complexs&#39;</span>, <span style="color:#e6db74">&#39;&lt;c8&#39;</span>)])
+   
+<span style="color:#75715e"># 另一种方法来制定各字段名称</span>
+structured <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;First&#39;</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2j</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Second&#39;</span>, <span style="color:#ae81ff">1.3</span>, <span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2j</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Third&#39;</span>, <span style="color:#ae81ff">0.8</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">3j</span>)], 
+                      dtype<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;i2&#39;</span>, <span style="color:#e6db74">&#39;a6&#39;</span>, <span style="color:#e6db74">&#39;f4&#39;</span>, <span style="color:#e6db74">&#39;c8&#39;</span>])
+structured<span style="color:#f92672">.</span>dtype<span style="color:#f92672">.</span>names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;id&#39;</span>, <span style="color:#e6db74">&#39;position&#39;</span>, <span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;complexs&#39;</span>] 
+<span style="color:#75715e">#改变dtype属性的names字段，这是给列取名字！！！</span>
+<span style="color:#75715e">#这样就可以像字典一样使用了，</span>
+   
+<span style="color:#75715e">#结构化数组调用示例</span>
+structured[<span style="color:#e6db74">&#39;id&#39;</span>]
+</code></pre></div></li>
+</ol>
+<h2 id="数组的基本操作">数组的基本操作</h2>
+<h3 id="运算的前提广播与广播机制umm不太熟">运算的前提——广播与广播机制（umm……不太熟）</h3>
+<p>numpy可以实现元素级操作，同时numpy实现了对不同形状对象的运算，这种机制称为<strong>广播</strong></p>
+<p><strong>广播机制</strong>：将两种不同形状的数组对象进行元素级运算的预处理机制（也就是升维），分为两个阶段。</p>
+<p>[1]. 判断两个数组的各个维度是否兼容，如果兼容直接进行</p>
+<p>[2]. 如果不兼容，再判断其中一个数组是否为一维，如果不是则不能进行.</p>
+<p>[3]. 用已有的元素生成其他的元素（用当前的1维数据生成其他维）</p>
+<p>广播机制其实很简单！</p>
+<h3 id="算数基本操作">算数基本操作</h3>
+<h5 id="算数运算符与比较运算符">算数运算符与比较运算符</h5>
+<p>+, -, *, /, %, **,  #, &gt;, &lt;, &lt;=, &gt;=（不等号用于生成布尔数组）等所有算数运算符都是元素级运算符，结果返回新数组</p>
+<p>Numpy对每种运算符提供了对应的函数: add, subtract, negtive, multiply, divide, floor_divide（地板除法运算）power, mod, square&hellip;&hellip;</p>
+<p><strong>注意：python中的*指的是元素级乘法，采用dot方法计算矩阵积</strong></p>
+<p><strong>特殊的运算符</strong>：+=，-=（自增、自减最常用）等某等运算符可以直接更改对象</p>
+<h5 id="关系运算符">关系运算符</h5>
+<p>Numpy中的关系运算符与Python并不相同，&amp;, |, ~, ^来表示与、或、非、抑或！！！！（并不是使用and, or, not）</p>
+<p>另外值得注意的是 Numpy中关系元素符运算优先级与Python不同</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#75715e"># 这在python中是完全可以的</span>
+b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&amp;</span> b <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#75715e"># 这样使用会报错，因为&amp;优先级高于比较运算符</span>
+(b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (b <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>) <span style="color:#75715e">#这样才可以用</span>
+</code></pre></div><hr>
+<h4 id="常用方法">常用方法</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr<span style="color:#f92672">.</span>T <span style="color:#75715e">#数组转置</span>
+arr<span style="color:#f92672">.</span>flatten() <span style="color:#75715e">#将数组将为1维，返回新的副本（意味着直接返回全新的数组对象，可以直接修改，注意这是与reshape不同的地方）</span>
+np<span style="color:#f92672">.</span>flat() <span style="color:#75715e">#将数组将为1维，返回一个1维迭代器，可以用for循环遍历</span>
+arr<span style="color:#f92672">.</span>ravel() <span style="color:#75715e">#将数组将为1维，返回视图（内存的位置是不变的！！！）</span>
+arr<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float) <span style="color:#75715e"># 返回一个新数组，将原数组的数据经过float()处理</span>
+arr<span style="color:#f92672">.</span>swapaxes(ax1, ax2) <span style="color:#75715e"># 将两个维度互换（换轴）</span>
+arr<span style="color:#f92672">.</span>transpose() <span style="color:#75715e"># 不带参数时，效果相当于转置</span>
+arr<span style="color:#f92672">.</span>transpose(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>) <span style="color:#75715e"># 相当于将arr的三个轴转换到新位置</span>
+arr<span style="color:#f92672">.</span>tolist() <span style="color:#75715e">#将ndarray转换为列表，如果使用哦那个list()函数转换，其实是相当于向量函数作用在ndarray上，是向量操作，打不傲tolist()的的效果</span>
+arr<span style="color:#f92672">.</span>tostring() <span style="color:#75715e"># 将ndarray转换为字符串</span>
+</code></pre></div><h5 id="通用函数与运算universal-function">通用函数与运算（Universal function）</h5>
+<p>通用函数是指元素级操作函数，可以抽象为f(arr) (包括上面讲到的运算符对应的函数)</p>
+<p>其中较常用的为dot（矩阵积），等。让人感动的是numpy重复实现了math库中绝大多数函数，以静态方法方式调用。</p>
+<p><strong>where函数——三元运算符</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#详见Numpy文档，我会在不断的使用中向其中添加</span>
+<span style="color:#75715e">#推广的三元运算符，其中condition、x，y维数相同</span>
+<span style="color:#75715e">#当condition为真时，返回x，否则返回y</span>
+np<span style="color:#f92672">.</span>where(condition, x, y)
+
+<span style="color:#75715e">#where函数的另一种用法</span>
+a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#f92672">...</span>])
+np<span style="color:#f92672">.</span>where(a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) 
+<span style="color:#75715e">#结果返回a中满足条件的元素的索引，以元组形式返回</span>
+<span style="color:#75715e">#这种用法与a[a&gt;5]布尔索引形式看起来得到的时互补的结果，布尔索引过滤得到满足条件的元素，而where返回所引</span>
+</code></pre></div><p><strong>nonezero</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#筛选出数组中非零元素坐标（索引）</span>
+a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(<span style="color:#f92672">...</span>)
+np<span style="color:#f92672">.</span>nonezero(a)
+
+np<span style="color:#f92672">.</span>where(a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+<span style="color:#75715e">#该功能可以用where函数实现, print两者的结果是相同的</span>
+</code></pre></div><p><strong>random</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#生成一个给定形状的随机数组，值在[0, 1)之间</span>
+a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>))
+</code></pre></div><p><strong>randint</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#生成一个给定形状的整数随机数组</span>
+a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>, size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>))
+<span style="color:#75715e">#1到9之间，3x3的数组</span>
+</code></pre></div><p><strong>pad</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#np.pad()常用与深度学习中的数据预处理，可以将numpy数组按指定的方法填充成指定的形状</span>
+<span style="color:#75715e">#参数有点多，详见Numpy文档</span>
+</code></pre></div><h5 id="聚合函数group-function">聚合函数（Group function）</h5>
+<p>聚合函数是指对一组值（往往是一个数组）进行操作，返回单一值。</p>
+<p>其中常用的有：sum, min, max, mean, prod（求乘积），std（标准差），median（中位数），var（方差），ptp（极差）</p>
+<hr>
+<h6 id="聚合函数安全版本">聚合函数安全版本</h6>
+<p>当数据存在缺失值呢？当普通版聚合函数遇到含缺失值数据时会返回nan，提示我们数据中有缺失值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1.</span>, <span style="color:#ae81ff">2.</span>, np<span style="color:#f92672">.</span>nan, <span style="color:#ae81ff">4.</span>])
+brr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>)
+<span style="color:#75715e"># 要十分注意的是np.nan是属于浮点类型！！！！！</span>
+np<span style="color:#f92672">.</span>max(arr)  <span style="color:#75715e"># 普通版本聚合函数</span>
+np<span style="color:#f92672">.</span>nanmaX(arr) <span style="color:#75715e"># 安全版聚合函数，也就是说在普通的前面加上nan</span>
+np<span style="color:#f92672">.</span>maximum(arr, brr) <span style="color:#75715e"># 普通版本 (maximum函数是对两数组进行元素级运算，取对应位最大值，当其中一者又nan数据时，该位置变为nan，不是全部哦)</span>
+np<span style="color:#f92672">.</span>fmax(arr, brr) <span style="color:#75715e"># 安全版本（nan不参与比较）</span>
+</code></pre></div><hr>
+<h5 id="其他统计函数">其他统计函数</h5>
+<p>cumsum函数（累加函数）、cumprod（累积函数）（两函数可以按不同轴进行统计）、average（加权平均，与mean不是完全相同）</p>
+<p>统计特定元素个数：count_nonzero（统计非0值），any（统计数组是否存在True或非零值，若存在则返回True，否则返回False），all（统计数组是否全都为True或非0值，若满足返回True，否则返回False）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">w <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.5</span>], [<span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.1</span>]])
+np<span style="color:#f92672">.</span>average(arr, weights<span style="color:#f92672">=</span>w) <span style="color:#75715e">#weights要求w与arr具有完全相同的形状，这个很有用，但是average只有函数实现而没有方法实现</span>
+</code></pre></div><hr>
+<h5 id="轴的概念">轴的概念！</h5>
+<p>虽说可以有多种理解，最官方的是：axis=0代表着沿着垂直方向，axis=1代表沿着水平方向。这样把axis=0或1与行与列分开看避免了很多混淆！</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">np<span style="color:#f92672">.</span>delete(arr, <span style="color:#ae81ff">0</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#75715e">#这里显示了最易混淆的情况之一</span>
+<span style="color:#75715e"># axis = 0代表着方向为垂直方向，前面的0代表着垂直的索引！不要单纯的把axis=0或1当成行或列！</span>
+</code></pre></div><h3 id="索引与切片花式索引布尔索引-需要更多的练习">索引与切片（花式索引、布尔索引）—— 需要更多的练习</h3>
+<p>索引的操作与标准库中的list类似（更加灵活），一起回忆一下：</p>
+<p><strong>操作相同但是返回值类型有区别：list的切片得到副本，而数组的切片得到视图</strong></p>
+<p><strong>副本可以理解为原对象变化不对副本产生影响（当然有深浅copy之分，这里不赘述了），视图就像是SQL数据库中的视图，原对象变化会导致视图对象发生变化，倘若数组想要得到副本可以使用实例方法copy来得到</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#一维数组索引示例 （在python中切片与索引（花式索引除外）返回的是副本，但在numpy中只返回视图！！！需要用copy与deep copy来创建副本）</span>
+a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">10</span>)
+a[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> 
+a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span> <span style="color:#75715e">#反向索引也很常见，相当于从第一个元素反着查</span>
+
+<span style="color:#75715e">#数组切片示例（结果很显然，不写了）</span>
+a[:]
+a[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">2</span>] <span style="color:#75715e">#闭开区间</span>
+a[<span style="color:#ae81ff">1</span>:]
+a[:<span style="color:#ae81ff">8</span>]
+a[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">9</span>:<span style="color:#ae81ff">2</span>] <span style="color:#75715e">#带步长的切片</span>
+a[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#75715e"># 逆序地去除所有数据</span>
+
+<span style="color:#75715e">#二维数组切片示例（多维数组以此类推）</span>
+A <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([range(<span style="color:#ae81ff">10</span>), range(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>)])
+A[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>] <span style="color:#75715e"># 选出第一行、第三列元素</span>
+A[<span style="color:#ae81ff">1</span>] <span style="color:#75715e">#相当于选取第二行，当然还有更标准的写法，见下一个</span>
+A[<span style="color:#ae81ff">1</span>,:] <span style="color:#75715e">#选取第2行，这相当于是省略了1轴的操作，这个逗号甚至可以省掉</span>
+A[:,<span style="color:#ae81ff">1</span>] <span style="color:#75715e">#选取第2列 切记！零轴空操作，就是指前面的那个冒号，是不能被省略的！</span>
+<span style="color:#75715e"># 注意！！！A[1]这种索引式返回结果是降维后的结果！！！而切片式返回的数组与原数组位数相同</span>
+<span style="color:#75715e"># 分别在0轴和1轴上切分，输出为两个轴切出的交集</span>
+A[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>] <span style="color:#75715e">#选取一个子矩阵</span>
+<span style="color:#75715e"># 索引与切片相结合，因为有索引所以降了一个维度哦！</span>
+A[<span style="color:#ae81ff">1</span>, :<span style="color:#ae81ff">2</span>]
+
+<span style="color:#75715e"># 花式索引！！！</span>
+<span style="color:#75715e"># 还是索引产生的副本！！！这与其他的取法不同！！！</span>
+A[[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>]:<span style="color:#ae81ff">2</span>] <span style="color:#75715e">#列表（序列均可）可选取我们要拿出来的单列，是花式索引！！！（花式索引甚至可以重复放并且支持负数） </span>
+<span style="color:#75715e"># 花式索引的另一种情况，将有高维数数组作为索引传入一维数组，会得到与高维数组相同形状的切片！！！</span>
+arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">9</span>)
+b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">4</span>)<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>)
+arr[b]
+<span style="color:#75715e"># 花式索引应用在二维数组（不熟）</span>
+arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">15</span>)<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)
+
+<span style="color:#75715e"># 布尔索引，也就是布尔数组作为索引，只取出值为True对应的值(不熟)</span>
+
+<span style="color:#75715e"># 不同种索引相互配合 </span>
+</code></pre></div><h3 id="数组迭代">数组迭代</h3>
+<p>最初级的方法是使用foreach循环</p>
+<p>更pythonic的方法是使用apply_along_axis()函数——直接对行、列整体进行操作（向量化编程）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">np<span style="color:#f92672">.</span>apply_along_axis(function, axis, arr)
+<span style="color:#75715e">#下面是对行求平均值的示例</span>
+np<span style="color:#f92672">.</span>apply_along_axis(np<span style="color:#f92672">.</span>mean, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, arr<span style="color:#f92672">=</span>A)
+<span style="color:#75715e">#非常值得注意的地方！axis是along which axis的含义！尤其是之后的split都是这样！</span>
+<span style="color:#75715e">#被我们操作的函数可以是自己定义的</span>
+</code></pre></div><h3 id="数组筛选与bool数组">数组筛选与bool数组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">A <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>)<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>))
+
+<span style="color:#75715e">#array([[-8, -7, -6, -5],</span>
+<span style="color:#75715e">#       [-4, -3, -2, -1],</span>
+<span style="color:#75715e">#       [ 0,  1,  2,  3],</span>
+<span style="color:#75715e">#       [ 4,  5,  6,  7]])</span>
+
+A[A <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>] <span style="color:#75715e">#筛选出数组中符合要求的元素，以一位数组返回</span>
+
+A <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">#相当于一个元素级操作，返回bool数组</span>
+</code></pre></div><h3 id="数组的形状变换">数组的形状变换</h3>
+<p>包括前面提到过的reshape, shape。</p>
+<p>ravel方法可以得到二维数组对应的一维数组（返回新数组）</p>
+<p>transpose方法可以实现转置以及换轴（返回新数组）swapaxes也可以实现换轴</p>
+<h3 id="数组切分">数组切分</h3>
+<p>数组的切分靠split族函数来实现：vsplit，hsplit，split</p>
+<p><strong>其实split完全可以代替vsplit与hsplit</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#vertival split</span>
+[B, C] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>vsplit(A, <span style="color:#ae81ff">2</span>) <span style="color:#75715e">#将A切为两部分，默认沿着列</span>
+[B, C] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>hsplit(A, <span style="color:#ae81ff">2</span>) <span style="color:#75715e">#将A切为两部分，默认沿着行</span>
+
+<span style="color:#75715e">#更为复杂但更灵活的split函数</span>
+[A1, A2, A3] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>split(A, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#75715e">#沿着1轴（就是沿着columns切）将A抽取[1, 3]后分成三部分</span>
+</code></pre></div><h3 id="数组拷贝">数组拷贝</h3>
+<p><strong>在numpy中唯一为ndarray创建副本的方法是使用copy方法</strong></p>
+<p>浅拷贝就是指直接的赋值 a = b</p>
+<p>这与python不同，python的copy函数是浅拷贝，deepcopy函数才是深拷贝</p>
+<h2 id="数组数据文件的读写">数组数据文件的读写</h2>
+<p>numpy提供 save, load函数来保存与读取二进制文件，getfromtxt从文本文件中读取</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>))
+np<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;sava_data&#39;</span>, data) <span style="color:#75715e">#将data存在save_data.npy文件中，npy是默认保存拓展名</span>
+dataget <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;save_data.npy&#39;</span>) <span style="color:#75715e">#读取数据</span>
+
+<span style="color:#75715e">#读取文本文件数据示例</span>
+data <span style="color:#f92672">=</span> getfromtxt(<span style="color:#e6db74">&#39;data.csv&#39;</span>, delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>, names<span style="color:#f92672">=</span>True) <span style="color:#75715e">#delimiter是分隔符，由于为CSV文件，分隔符自然为逗号</span>
+                                                         <span style="color:#75715e">#names代表数据中是否含有标题</span>
+    													 <span style="color:#75715e">#缺失的数据会被补成nan</span>
+</code></pre></div><p>事实上这些读取的工作常常由pandas来操作</p>
+<h2 id="random库">random库</h2>
+<p>常见函数</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># rand函数 返回0到1之间的随机数，左闭右开（也就是不能取到1），为什么显示有n个参数呢？</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand()
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(<span style="color:#ae81ff">5</span>)
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>) <span style="color:#75715e"># 不要和reshape弄混！rand不接受元组参数</span>
+
+<span style="color:#75715e"># randn函数，返回shape为括号之内符合标准正态分布规律</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn()
+
+<span style="color:#75715e"># randint 返回随机整数</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">5</span>) <span style="color:#75715e">#返回0-5内的随机整数，左闭右开</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>) <span style="color:#75715e"># 返回10-100内的随机整数，左闭右开</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">10</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>) <span style="color:#75715e"># 返回一个长度为15的数组，之内的元素是0-10闭开区间</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">10</span>) <span style="color:#75715e"># 返回一个长度为10的的。。。。不过最好还是写成size=10</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>, size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>)) <span style="color:#75715e">#返回一个……shape为10x10的数组， shape接受了元组类型参数，当然size=在这里可以不写</span>
+
+<span style="color:#75715e"># random函数，与rand十分相似。区别在于：rand只接受非元组类型参数，而random必须接受元素类型参数</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random()
+
+<span style="color:#75715e"># 设置种子，使得每次产生的随机数可以一样（根据种子生成），设置一次种子后，其余函数的随机数都是从有seed决定的序列开始依次取下去</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">100</span>) <span style="color:#75715e"># 在后面加上各种产生随机数的函数即可</span>
+
+<span style="color:#75715e"># uniform函数，相当于升级版的rand</span>
+
+<span style="color:#75715e">#normal函数，可以自己设置的正态分布</span>
+
+<span style="color:#75715e"># choice函数</span>
+
+<span style="color:#75715e"># shuffle</span>
+
+<span style="color:#75715e">#permutation</span>
+</code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/" title="Pandas基础"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/1.-life-sharing/" title="1. Life Sharing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1619591173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619591173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619591173"></script>
+    <script src="/js/jquery.sticky.js?1619591173"></script>
+    <script src="/js/featherlight.min.js?1619591173"></script>
+    <script src="/js/highlight.pack.js?1619591173"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619591173"></script>
+    <script src="/js/learn.js?1619591173"></script>
+    <script src="/js/hugo-learn.js?1619591173"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1619591173"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

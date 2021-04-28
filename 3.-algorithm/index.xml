@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3. Algorithm on QiBlog</title>
+    <link>https://iamqisir.github.io/3.-algorithm/</link>
+    <description>Recent content in 3. Algorithm on QiBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Apr 2021 13:34:55 +0800</lastBuildDate><atom:link href="https://iamqisir.github.io/3.-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基础排序算法</title>
+      <link>https://iamqisir.github.io/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Wed, 28 Apr 2021 13:35:06 +0800</pubDate>
+      
+      <guid>https://iamqisir.github.io/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description>常见排序算法 正在施工！
+这个博客记录着我学习Algorithm 4th的一些心得或者说总结，将会持续更新下去
+我们为什么要学习排序算法呢？
+排序就是将一组对象按照某种逻辑顺序重新排列的过程，在平时编程中虽然往往不需要自己写排序算法（编程语言往往都封装了优秀的排序算法），但是学习排序算法还是十分有意义的：
+ 对排序算法的分析有助于理解其他比较算法性能的方法 类似的技术可用于解决其他的问题（举一反三） 排序往往是我们解决其他问题的第一步骤   一些预备知识：
+ 需要注意的是，默认的排序是指将数组按升序排序 主键：可以这样理解，一个对象可能有多个属性，但我们只看重要的那个。比如一个学生有三门成绩（语数英），但我们现在想通过数学成绩排序，那么数学成绩可以理解为主键。也就是说主键是我们要比较的东西 在Java中，对象的比较可以通过实现Comparable接口或Comparator来实现，在这个文章中默认比较的对象都实现了Comparable，并使用Comparable数组的方式来代表（这个涉及到接口类型变量的知识，可以简单理解为Comparable a = b代表着b是一个实现了Comparable接口的对象，其可进行比较）。 算法的稳定性是指主键相同的数组元素在排序前后它们的相对次序不会发生变化   1. 冒泡排序 1. 原理 冒泡排序是很简单的排序方法，它的核心思想就是“落井下石”，意思就是依次将主键最大（对于单纯的数字而言就是就数值更大的意思）的元素沉到最后，而较小的元素会不断上浮，就像石头砸进水中沉底而气泡漂浮一样，这也是冒泡排序名字的由来（个人理解）。另外冒泡排序注重与元素本身（看到选择排序时你会注意到不同）
+冒泡排序通过不断交换不符合顺序的相邻元素来实现排序，其每次均会通过比较找到最大的元素并将其落到最后一位。当最后一个元素落到数组头时，排序自然而然就成功了。
+2. 实现 冒泡排序伪代码：
+ BubbleSort：
+Loop (i: From 0 to N-1):
+​	Loop (j: From 0 to N-i-1):
+​	if arr[j+1] &amp;lt; arr[j]:
+​	交换arr[j+1]与arr[j]
+ ==疑问：==
+当然你会发现一个问题，外层循环的次数是固定的（没错，就是N次），如果在N次之前数组已经有序了呢？那我们岂不是浪费了大量的时间？（可以极端地假设原数组就是有序的，那么我们其实在接下来的N次大循环中什么也没做）我们可以设置一个额外的布尔变量flag来记录是否发生了交换（如果发生了交换那么flag保持为false，如果未发生交换flag就变为true），也就是我们在大循环上加入一个判断，如果flag为true就退出循环，伪代码如下:
+ BubbleSort：
+bool flag =false
+Loop (i: From 0 To N-1):
+​	if !</description>
+    </item>
+    
+  </channel>
+</rss>

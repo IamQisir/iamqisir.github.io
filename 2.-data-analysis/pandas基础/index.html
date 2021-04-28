@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Pandas基础 :: QiBlog</title>
+
+    
+    <link href="/css/nucleus.css?1619591172" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1619591172" rel="stylesheet">
+    <link href="/css/hybrid.css?1619591172" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619591172" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619591172" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619591172" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1619591172" rel="stylesheet">
+    <link href="/css/theme.css?1619591172" rel="stylesheet">
+    <link href="/css/tabs.css?1619591172" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1619591172" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1619591172"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="https://i.postimg.cc/nh2394H7/qisir-icon.png"/>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1619591172"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619591172"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/iamqisir.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1619591172"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4.-data-structure/" title="4. Data Structure" class="dd-item
+        
+        
+        
+        ">
+      <a href="/4.-data-structure/">
+          4. Data Structure
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/4.-data-structure/%E6%A0%88/" title="栈" class="dd-item ">
+        <a href="/4.-data-structure/%E6%A0%88/">
+        栈
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-algorithm/" title="3. Algorithm" class="dd-item
+        
+        
+        
+        ">
+      <a href="/3.-algorithm/">
+          3. Algorithm
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="基础排序算法" class="dd-item ">
+        <a href="/3.-algorithm/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        基础排序算法
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-data-analysis/" title="2. Data Analysis" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/2.-data-analysis/">
+          2. Data Analysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/" title="Pandas基础" class="dd-item active">
+        <a href="/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/">
+        Pandas基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/" title="Numpy基础" class="dd-item ">
+        <a href="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/">
+        Numpy基础
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-life-sharing/" title="1. Life Sharing" class="dd-item
+        
+        
+        
+        ">
+      <a href="/1.-life-sharing/">
+          1. Life Sharing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/" title="我的开场白" class="dd-item ">
+        <a href="/1.-life-sharing/%E6%88%91%E7%9A%84%E5%BC%80%E5%9C%BA%E7%99%BD/">
+        我的开场白
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>数据分析基础</a> > <a href='/2.-data-analysis/'>2. Data Analysis</a> > Pandas基础
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pandas库数据结构简介">Pandas库数据结构简介</a>
+      <ul>
+        <li><a href="#series对象">Series对象</a></li>
+        <li><a href="#操作series对象">操作Series对象</a></li>
+        <li><a href="#dataframe对象">DataFrame对象</a></li>
+        <li><a href="#操作dataframe对象">操作DataFrame对象</a></li>
+      </ul>
+    </li>
+    <li><a href="#index对象基础">Index对象基础</a></li>
+    <li><a href="#数据结构之间的运算">数据结构之间的运算</a>
+      <ul>
+        <li><a href="#基本算数运算方法">基本算数运算方法</a></li>
+        <li><a href="#dataframe与series之间的运算">DataFrame与Series之间的运算</a></li>
+      </ul>
+    </li>
+    <li><a href="#函数应用和映射">函数应用和映射</a>
+      <ul>
+        <li><a href="#元素级函数">元素级函数</a></li>
+        <li><a href="#按行或列操作的函数">按行或列操作的函数</a></li>
+        <li><a href="#统计函数">统计函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#排序与排位次">排序与排位次</a></li>
+    <li><a href="#相关性和协方差">相关性和协方差</a></li>
+    <li><a href="#nan数据的处理">NaN数据的处理</a></li>
+    <li><a href="#等级索引和分级">等级索引和分级</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Pandas基础
+            </h1>
+          
+
+        
+
+
+<h1 id="basic-knowledge-of-pandas">Basic knowledge of Pandas</h1>
+<p><strong>正在施工，有很多地方正待完善</strong></p>
+<p>pandas库是以numpy库为基础建成的，是python数据分析的核心库。也正因如此，pandas内的数据结构与numpy的数组有许多相似的地方。</p>
+<p><strong>以下的代码示例均是在引入numpy和pandas库的基础上，不要忘记！</strong></p>
+<h2 id="pandas库数据结构简介">Pandas库数据结构简介</h2>
+<h3 id="series对象">Series对象</h3>
+<p>Series对象用来存放一维数据，由两个相互关联的数组组成。index数组存放索引（令人惊喜的是，索引可以有重复），values数组存放值。其实index对象使得操作Series和DataFrame十分方便（后面会单独拿出来一节将index对象）, 而且Series内的元素类型可以不同! 将自动生成新的数据类型! (NAN自动变化那个是什么情况?)</p>
+<h4 id="声明series对象">声明Series对象</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#使用序列创建Series对象</span>
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>)) <span style="color:#75715e">#别忘记range也是一种序列对象</span>
+<span style="color:#75715e"># 最常用的情况之一, 使用ndarray创建Series对象</span>
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>))
+<span style="color:#75715e"># 一种特殊情况</span>
+pd<span style="color:#f92672">.</span>Series(<span style="color:#ae81ff">22</span>, index<span style="color:#f92672">=</span>list(range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>))) <span style="color:#75715e">#会自动补成一样的长度，很像广播机制</span>
+<span style="color:#75715e"># 那两者长度不相同, 但都不为1呢? 会报错!!! 想想广播机制！！！</span>
+
+<span style="color:#75715e">#使用字典创建Series对象 这是十分重要的构造方法</span>
+dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;red&#39;</span>: <span style="color:#ae81ff">2000</span>, <span style="color:#e6db74">&#39;blue&#39;</span>: <span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;orange&#39;</span>: <span style="color:#ae81ff">5000</span>}
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(dict)
+<span style="color:#75715e"># 传入索引并自定义索引 --- 自定义索引会成为最终索引, 原字典里没有的将成为缺失值</span>
+<span style="color:#75715e">#重复的index! 如下所示: red会取原来的值, 而其他原字典里没有的, 对应的值都是NAN(还是浮点类型)!!!</span>
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(dict, index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;Marry&#39;</span>, <span style="color:#e6db74">&#39;Rose&#39;</span>]) 
+<span style="color:#75715e">#单从效果上来看是直接构造了自定义索引的index对象，该Series对象可以当做字典使用</span>
+
+<span style="color:#75715e">#使用其他Series对象构造Series对象</span>
+s0 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(range(<span style="color:#ae81ff">6</span>))
+s1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(s0)
+<span style="color:#75715e">#值得注意的是！以此种方式构造的Series并不是副本而是原Series对象的引用！改变原对象会对新对象产生影响</span>
+
+<span style="color:#75715e">#构造时添加索引（在后面Index对象部分会细讲）</span>
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">5</span>), index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>, <span style="color:#e6db74">&#39;four&#39;</span>, <span style="color:#e6db74">&#39;five&#39;</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">得到的Series对象s为
+</span><span style="color:#e6db74">one      0
+</span><span style="color:#e6db74">two      1
+</span><span style="color:#e6db74">three    2
+</span><span style="color:#e6db74">four     3
+</span><span style="color:#e6db74">five     4
+</span><span style="color:#e6db74">dtype: int32
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#Series对象重要属性</span>
+<span style="color:#75715e"># 可以通过以下方式查看索引与值数组</span>
+s<span style="color:#f92672">.</span>values <span style="color:#75715e">#返回数组类型</span>
+s<span style="color:#f92672">.</span>index <span style="color:#75715e">#返回Index对象类型</span>
+s<span style="color:#f92672">.</span>name <span style="color:#75715e">#Series的名字，在DataFrame中类似</span>
+</code></pre></div><h3 id="操作series对象">操作Series对象</h3>
+<h4 id="获取series内部对象索引与切片">获取Series内部对象(索引与切片)</h4>
+<p>像numpy中操作数组一样操作Series对象</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>, <span style="color:#e6db74">&#39;four&#39;</span>, <span style="color:#e6db74">&#39;five&#39;</span>])
+
+<span style="color:#75715e">#索引与切片(对于自动索引)</span>
+<span style="color:#75715e">#即使在自定义索引后也可使用自动索引</span>
+a[<span style="color:#ae81ff">1</span>]
+a[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+a[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]
+a[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">5</span>:<span style="color:#ae81ff">2</span>]
+a[<span style="color:#ae81ff">5</span>:<span style="color:#ae81ff">0</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e">#索引与切片(对于自定义索引)</span>
+a[<span style="color:#e6db74">&#39;one&#39;</span>:<span style="color:#e6db74">&#39;four&#39;</span>] <span style="color:#75715e">#注意! 自定义索引会取到右端点</span>
+
+<span style="color:#75715e">#筛选</span>
+a[a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span>] <span style="color:#75715e">#返回一个Series对象，内部元素为大于3的值. 这个中括号内的a代指每一个元素!</span>
+
+<span style="color:#75715e">#取对应标签元素(花式索引!)</span>
+b <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], 
+              index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>, <span style="color:#e6db74">&#39;four&#39;</span>, <span style="color:#e6db74">&#39;five&#39;</span>])
+b[[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;four&#39;</span>]] <span style="color:#75715e">#取出索引为&#39;one&#39;和&#39;four&#39;的元素. b[[0, 3]]也可以达到同样的效果</span>
+<span style="color:#75715e"># 注意! 自定义索引与自动索引不能同时使用 像b[[&#39;one&#39;, 2]]</span>
+
+<span style="color:#75715e">#布尔索引</span>
+b[[True, False, True, False, True]] <span style="color:#75715e">#按index从上到下的顺序取出，但bool数组的量一定要与index长度相同</span>
+b[b<span style="color:#f92672">&gt;</span>b<span style="color:#f92672">.</span>mean()] <span style="color:#75715e">#采用这种过滤方式也很好，其实是使用了bool索引+广播机制, 返回Series类型</span>
+</code></pre></div><h4 id="series对象的可变性">Series对象的可变性</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Series对象的Values数组是可变的, 自由但是安全性需要注意</span>
+a <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e">#这个操作在a中添加了新的一行，若a中原就含有index为0的项，那么将会改变它的值</span>
+<span style="color:#75715e">#你甚至可以这样改变index, 但是values无法被更改, 虽然可以逐个更改</span>
+a<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>]
+
+<span style="color:#75715e">#你甚至可以通过索引与切片来改变Series对象</span>
+a[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">82</span> <span style="color:#75715e">#将0 1 2对应得改为82, 就问你强不强! 这应该是广播机制</span>
+
+<span style="color:#75715e">#改变数据类型</span>
+a<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float) <span style="color:#75715e">#直接改变values类型，与Numpy数据操作类似</span>
+</code></pre></div><p>总结：这里有一个特别的现象！当通过索引改变Series对象时，若索引在index中则改变，否则添加。但通过切片操作改变Series对象时，index不含的索引并不会被添加进Series对象。</p>
+<h4 id="series对象的查重-包含关系的判断">Series对象的查重, 包含关系的判断</h4>
+<p>我们已经领略了Series对象的高度自由, 不过这还不算什么, 好戏在后头呢.</p>
+<p>Series对象允许values数组内部元素重复, 那有没有什么方法能实现快速查找重复元素并计数呢?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], 
+              index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;white&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>,<span style="color:#e6db74">&#39; green&#39;</span>,<span style="color:#e6db74">&#39;yellow&#39;</span>])
+s<span style="color:#f92672">.</span>unique() <span style="color:#75715e">#返回array([1, 0, 2, 3], dtype=int64), 返回一个包含s中不重复元素的数组</span>
+s<span style="color:#f92672">.</span>value_counts() <span style="color:#75715e">#统计重复元素个数</span>
+<span style="color:#75715e">#返回值为:</span>
+<span style="color:#75715e">#2    2</span>
+<span style="color:#75715e">#1    2</span>
+<span style="color:#75715e">#3    1</span>
+<span style="color:#75715e">#0    1</span>
+<span style="color:#75715e">#有的同学可能想问, 有没有index_count呢? 联想是好的, 不过确实没有, 还是自己写一个吧! = W =</span>
+</code></pre></div><p>Series同时竟还也允许index数组内部元素重复! 也就是允许一对多!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>]) <span style="color:#75715e">#多强啊!</span>
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">blue    1
+</span><span style="color:#e6db74">blue    2
+</span><span style="color:#e6db74">red     3
+</span><span style="color:#e6db74">dtype: int64
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+</code></pre></div><h5 id="包含关系的判断">包含关系的判断</h5>
+<p>isin方法可以实现这个功能, 不过它的设计可能有点反人类. (额, 尤其是学完java的同学, 学python尤其是它的开源库简直煎熬好吗? 就指命名上)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s<span style="color:#f92672">.</span>isin([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>]) <span style="color:#75715e">#判断[0, 3]是否包含在数据结构中</span>
+<span style="color:#75715e">#值得注意的是: isin接收序列为参数, 它的含义是(以这个为例)0与3, 而不是0-3的元素!</span>
+<span style="color:#e6db74">&#39;&#39;&#39;返回一个布尔数组
+</span><span style="color:#e6db74">white     False
+</span><span style="color:#e6db74">white      True
+</span><span style="color:#e6db74">blue      False
+</span><span style="color:#e6db74">green     False
+</span><span style="color:#e6db74">green    False
+</span><span style="color:#e6db74">yellow     True
+</span><span style="color:#e6db74">dtype: bool
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+</code></pre></div><h4 id="series对象的基本算术运算">Series对象的基本算术运算</h4>
+<p>就像在前面提到过的，Pandas库是建立在Numpy库基础上的，对Numpy数组的许多运算可以直接在Pandas库都为对象中使用，下面的代码示例会提到这一点</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 以下运算均为元素级运算（即对Series内的每一个元素进行运算，在numpy中曾提到过）</span>
+a <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+b <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>])
+a <span style="color:#f92672">+</span> b <span style="color:#75715e">#对应元素相加，如果两Series长度不相同，多出的一位由Nan代替（not a number）</span>
+a <span style="color:#f92672">-</span> b
+a <span style="color:#f92672">*</span> b
+a <span style="color:#f92672">/</span> b
+a <span style="color:#75715e"># b</span>
+a <span style="color:#f92672">%</span> b
+a <span style="color:#f92672">**</span> b
+<span style="color:#75715e"># 对于两个index不同Series对象的运算</span>
+c <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">120</span>], index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>])
+d <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">99</span>, <span style="color:#ae81ff">120</span>], index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;E&#39;</span>, <span style="color:#e6db74">&#39;F&#39;</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">c + d之和符合索引对齐规则！相同的加在一起，不同的也列进去，只不过为Nan，别忘记！
+</span><span style="color:#e6db74">Python科学计算包中一旦有Nan，则整形一定变为浮点型
+</span><span style="color:#e6db74">A      NaN
+</span><span style="color:#e6db74">B      NaN
+</span><span style="color:#e6db74">C    210.0
+</span><span style="color:#e6db74">E      NaN
+</span><span style="color:#e6db74">F      NaN
+</span><span style="color:#e6db74">dtype: float64
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e"># 以下为基本函数操作（过于基础，和算术运算符放在一起）</span>
+<span style="color:#75715e">#Series对象可以被numpy中的数学函数实现元素级运算或聚合运算，Series对象也封装了这些方法</span>
+np<span style="color:#f92672">.</span>log(a)
+np<span style="color:#f92672">.</span>mean(a)
+a<span style="color:#f92672">.</span>mean()
+a<span style="color:#f92672">.</span>median()
+a<span style="color:#f92672">.</span>sum()
+<span style="color:#75715e">#几乎所有函数都可以，这里不列举太多（to name but a few）</span>
+</code></pre></div><p>Series对象的where方法是进行数据替换的好方法（同理mask方法也是）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Series<span style="color:#f92672">.</span>where(cond, other<span style="color:#f92672">=</span>nan, inplace<span style="color:#f92672">=</span>False, axis<span style="color:#f92672">=</span>None, level<span style="color:#f92672">=</span>None, errors<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#66d9ef">raise</span><span style="color:#960050;background-color:#1e0010">’</span>, try_cast<span style="color:#f92672">=</span>False, raise_on_error<span style="color:#f92672">=</span>None)
+<span style="color:#75715e">#如果 cond 为真，保持原来的值，否则替换为other， inplace为真标识在原数据上操作，为False标识在原数据的copy上操作。</span>
+<span style="color:#75715e">#other must be the same shape as self: other的形状必须与self相同。</span>
+
+<span style="color:#75715e">#mask方法与where方法操作效果正好相反</span>
+</code></pre></div><p>Series对象有很多特性与字典相同，例如可以：</p>
+<ul>
+<li>通过in判元素是否在该数据结构中（这是Python集合类型的一个特性），但是在有自定义索引的情况下，就不能怕判断系统默认索引是否在Series中（系统的默认索引可以理解为恩赐）</li>
+</ul>
+<hr>
+<h3 id="dataframe对象">DataFrame对象</h3>
+<p>DataFame对象用来存储多维数据, 其设计目的就是将Series对象拓展至多维 (这在暗示DataFrame有很多特性与Series相似), 下图为基本示例（图已丢失，改日再找一个合适的）</p>
+<p>DataFrame对象可以理解为一个由Series组成的字典, column index为字典的key (当然, 这只是一种理解, 形式上很相似)</p>
+<h4 id="创建dataframe对象">创建DataFrame对象</h4>
+<p>刚才说过了, DataFrame可以理解为Series的字典, 那么就用字典来初始化吧!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;yellow&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>], 
+       <span style="color:#e6db74">&#39;object&#39;</span>: [<span style="color:#e6db74">&#39;ball&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>, <span style="color:#e6db74">&#39;paper&#39;</span>, <span style="color:#e6db74">&#39;mug&#39;</span>],
+       <span style="color:#e6db74">&#39;price&#39;</span>: [<span style="color:#ae81ff">1.2</span>, <span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.9</span>, <span style="color:#ae81ff">1.7</span>]}
+<span style="color:#75715e">#你甚至可以通过嵌套字典来构造DataFrame对象, 像这样通过嵌套结构来构造时, 不够的元素会被nan填充</span>
+<span style="color:#75715e">#字典的key会被作为列索引</span>
+frame <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(dict, index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>, <span style="color:#e6db74">&#39;four&#39;</span>, <span style="color:#e6db74">&#39;five&#39;</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">        color  object  price
+</span><span style="color:#e6db74">one      blue    ball    1.2
+</span><span style="color:#e6db74">two     green     pen    1.0
+</span><span style="color:#e6db74">three  yellow  pencil    0.6
+</span><span style="color:#e6db74">four      red   paper    0.9
+</span><span style="color:#e6db74">five    white     mug    1.7
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#我们可以选取特定列进行构造</span>
+<span style="color:#75715e">#通过columns属性指定相关列</span>
+frame2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(dict, columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;price&#39;</span>], 
+                      index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>, <span style="color:#e6db74">&#39;four&#39;</span>, <span style="color:#e6db74">&#39;five&#39;</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">        color  price
+</span><span style="color:#e6db74">one      blue    1.2
+</span><span style="color:#e6db74">two     green    1.0
+</span><span style="color:#e6db74">three  yellow    0.6
+</span><span style="color:#e6db74">four      red    0.9
+</span><span style="color:#e6db74">five    white    1.7
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+
+<span style="color:#75715e">#可以通过index, values, columns属性来查看相关信息</span>
+
+<span style="color:#75715e">#使用嵌套列表构建DataFrame</span>
+a <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]]
+a_frame <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(a)
+<span style="color:#e6db74">&#39;&#39;&#39;   
+</span><span style="color:#e6db74">0  1
+</span><span style="color:#e6db74">0  1  2
+</span><span style="color:#e6db74">1  3  4
+</span><span style="color:#e6db74">2  5  6
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+
+<span style="color:#75715e"># 通过Series对象构造DataFrame</span>
+<span style="color:#75715e"># 若如此构造，s与d是相互关联的，其值共享同一内存</span>
+s <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+d <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(s)
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">   0
+</span><span style="color:#e6db74">0  1
+</span><span style="color:#e6db74">1  2
+</span><span style="color:#e6db74">2  3
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+</code></pre></div><p>通过多维序列初始化 (通常使用arange和reshape)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame3 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">16</span>)<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)), index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;yellow&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>],\
+                     columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ball&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>, <span style="color:#e6db74">&#39;paper&#39;</span>])
+</code></pre></div><h3 id="操作dataframe对象">操作DataFrame对象</h3>
+<h4 id="选取dataframe元素">选取DataFrame元素</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">16</span>)<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)), 
+                     index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>,<span style="color:#e6db74">&#39; yellow&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>], 
+                    columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ball&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>, <span style="color:#e6db74">&#39;paper&#39;</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">         ball  pen  pencil  paper
+</span><span style="color:#e6db74">red         0    1       2      3
+</span><span style="color:#e6db74">blue        4    5       6      7
+</span><span style="color:#e6db74"> yellow     8    9      10     11
+</span><span style="color:#e6db74">white      12   13      14     15
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#对列的选取, 返回Series对象</span>
+frame[<span style="color:#e6db74">&#39;ball&#39;</span>]
+frame<span style="color:#f92672">.</span>ball <span style="color:#75715e">#像查看属性一样查看列</span>
+<span style="color:#75715e">#你只要将DataFrame类比为Series的字典就很好理解</span>
+
+<span style="color:#75715e">#对行的选取(也就是index), 返回Series对象</span>
+frame<span style="color:#f92672">.</span>loc(<span style="color:#e6db74">&#39;red&#39;</span>)
+frame<span style="color:#f92672">.</span>loc([<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>]) <span style="color:#75715e">#选取多个行</span>
+
+<span style="color:#75715e">#选取DataFrame的部分</span>
+frame[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>] <span style="color:#75715e">#相当于选取0-1行, 0-3列</span>
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">         ball  pen  pencil  paper
+</span><span style="color:#e6db74">blue        4    5       6      7
+</span><span style="color:#e6db74"> yellow     8    9      10     11
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+
+<span style="color:#75715e">#选取DataFrame的单个元素, 像操作多维数组一样</span>
+frame[<span style="color:#e6db74">&#39;pen&#39;</span>][<span style="color:#e6db74">&#39;red&#39;</span>] <span style="color:#75715e">#注意是先选列后选行!</span>
+</code></pre></div><h4 id="dataframe对象的修改">DataFrame对象的修改</h4>
+<ol>
+<li>
+<p>为了增加可读性, 可以为index和columns属性指定名称</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;color&#39;</span>
+frame<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;item&#39;</span>
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">item     ball  pen  pencil  paper
+</span><span style="color:#e6db74">color                            
+</span><span style="color:#e6db74">red         0    1       2      3
+</span><span style="color:#e6db74">blue        4    5       6      7
+</span><span style="color:#e6db74"> yellow     8    9      10     11
+</span><span style="color:#e6db74">white      12   13      14     15
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+</code></pre></div></li>
+<li>
+<p>添加列</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame[<span style="color:#e6db74">&#39;new&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span> 
+<span style="color:#75715e">#frame会产生新的一列, 其所有元素均为12</span>
+   
+frame[<span style="color:#e6db74">&#39;new&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+<span style="color:#75715e">#也可以借助序列对象, 例如range, np,arange并通过list转化为列表</span>
+</code></pre></div></li>
+<li>
+<p>添加行 (与列几乎一样)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame<span style="color:#f92672">.</span>loc(<span style="color:#e6db74">&#39;new&#39;</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
+<span style="color:#75715e">#frame会产生新的一行, 其所有元素均为12</span>
+   
+frame<span style="color:#f92672">.</span>loc(<span style="color:#e6db74">&#39;new&#39;</span>) <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+<span style="color:#75715e">#与列同理</span>
+</code></pre></div></li>
+<li>
+<p>删除</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">del</span> frame[<span style="color:#e6db74">&#39;new&#39;</span>]
+<span style="color:#75715e">#是在原对象上进行修改, 删除new列</span>
+<span style="color:#75715e">#其实del几乎能删除一切你想删掉的东西(指对象), 无法删除函数调用(即使返回对象)</span>
+<span style="color:#75715e">#无法删除行的原因就是上一句话, loc方法是一个函数!</span>
+</code></pre></div></li>
+</ol>
+<h4 id="dataframe对象的筛选">DataFrame对象的筛选</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#与Numpy中数组, Pandas中的Series一样</span>
+frame[frame<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>] 
+<span style="color:#75715e">#会返回一个布尔数组</span>
+</code></pre></div><h4 id="判断元素所属关系">判断元素所属关系</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame<span style="color:#f92672">.</span>isin([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>]) <span style="color:#75715e">#与Series一样</span>
+</code></pre></div><hr>
+<h2 id="index对象基础">Index对象基础</h2>
+<p>像Series对象和DataFrame对象在数据分析方面的绝大多数优秀特性都取决于完全整合到这些数据结构中的Index对象</p>
+<p><strong>Pandas中的Index对象是不可变的</strong></p>
+<p><strong>以下的代码对Series和DataFrame均有效</strong></p>
+<ol>
+<li>查看index索引</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>, <span style="color:#e6db74">&#39;three&#39;</span>])
+<span style="color:#75715e">#查看标签的最值(字符串由字典顺序)</span>
+ser<span style="color:#f92672">.</span>idmax() <span style="color:#75715e">#index索引最大值</span>
+ser<span style="color:#f92672">.</span>idmin() <span style="color:#75715e">#index索引最小值</span>
+
+<span style="color:#75715e">#查看数据结构是否有重复索引, 通过查看index的is_unique属性</span>
+ser<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>is_unique
+</code></pre></div><ol start="2">
+<li>
+<p>更换索引
+通过reindex方法可以更换Series对象的索引, 生成一个新对象.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser<span style="color:#f92672">.</span>reindex([<span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#e6db74">&#39;3&#39;</span>])
+<span style="color:#75715e">#你甚至可以在这个过程中实现删除与添加, 多添加即为增加(nan), 减少即为删除 ----不要忘记是返回新对象</span>
+</code></pre></div><p>reindex的自动编制索引功能</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>], index<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">0    1
+</span><span style="color:#e6db74">3    5
+</span><span style="color:#e6db74">5    6
+</span><span style="color:#e6db74">6    3
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#索引列并不是连续的, 可以通过给reindex传参实现智能调整(ffill, bfill)</span>
+ser<span style="color:#f92672">.</span>reindex(range(<span style="color:#ae81ff">6</span>), method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ffill&#39;</span>)
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">0    1
+</span><span style="color:#e6db74">1    1
+</span><span style="color:#e6db74">2    1
+</span><span style="color:#e6db74">3    5
+</span><span style="color:#e6db74">4    5
+</span><span style="color:#e6db74">5    6
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+ser<span style="color:#f92672">.</span>reindex(range(<span style="color:#ae81ff">6</span>), method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bfill&#39;</span>)
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">0    1
+</span><span style="color:#e6db74">1    5
+</span><span style="color:#e6db74">2    5
+</span><span style="color:#e6db74">3    5
+</span><span style="color:#e6db74">4    6
+</span><span style="color:#e6db74">5    6
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#ffill与bfill的区别在于, ffill将缺失的部分向前取等</span>
+<span style="color:#75715e">#bfill则是向后 (front与back)</span>
+   
+<span style="color:#75715e">#对于DataFrame甚至可以更换行与列(你甚至可以同时更换)</span>
+</code></pre></div></li>
+<li>
+<p>删除</p>
+<p>drop方法返回不含某几行或某几列的新对象</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#对于Series</span>
+ser <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">2.</span>), index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>])
+ser<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;yellow&#39;</span>) <span style="color:#75715e">#删除标签为yellow的这一行</span>
+ser<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;yellow&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>])
+   
+<span style="color:#75715e">#对于DataFrame</span>
+frame <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">16</span>)<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)),
+                    index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;yellow&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>],
+                    columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ball&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>,<span style="color:#e6db74">&#39; paper&#39;</span>])
+frame<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;blue&#39;</span>,<span style="color:#e6db74">&#39;yellow&#39;</span>]) <span style="color:#75715e">#删除多行</span>
+frame<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>]) <span style="color:#75715e">#沿着1轴删除多列, axis=1轴即是沿着列</span>
+</code></pre></div><ol start="4">
+<li>
+<p>算数与数据对齐</p>
+<p>这是体现pandas中数据结构灵活的特点的一个地方, Series和DataFrame之间的运算是将数据结构的索引对齐后进行元素级运算. 如果双方标签的集合不同, 取两者并集并在对应位置上放置nan(非常好理解)</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="数据结构之间的运算">数据结构之间的运算</h2>
+<h3 id="基本算数运算方法">基本算数运算方法</h3>
+<p>add, sub, div, mul
+其实它们就是+ - * \ (<strong>其实其他的例如 % # 也都也可以参与运算</strong>)</p>
+<h3 id="dataframe与series之间的运算">DataFrame与Series之间的运算</h3>
+<p>由于我们可以将DataFrame视作Series的字典, 所以就很显然.
+运算的前提是让Series对象的索引和DataFrame对象的列名保持一致(广播机制)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">16</span>)<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>)),
+                    index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;yellow&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>],
+                    columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ball&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>, <span style="color:#e6db74">&#39;paper&#39;</span>])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">        ball  pen  pencil  paper
+</span><span style="color:#e6db74">red        0    1       2      3
+</span><span style="color:#e6db74">blue       4    5       6      7
+</span><span style="color:#e6db74">yellow     8    9      10     11
+</span><span style="color:#e6db74">white     12   13      14     15
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+ser <span style="color:#f92672">=</span> pa<span style="color:#f92672">.</span>Series(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">4</span>), index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;ball&#39;</span>,<span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;pencil&#39;</span>, <span style="color:#e6db74">&#39;paper&#39;</span>])
+frame <span style="color:#f92672">+</span> ser
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">        ball  pen  pencil  paper
+</span><span style="color:#e6db74">red        0    2       4      6
+</span><span style="color:#e6db74">blue       4    6       8     10
+</span><span style="color:#e6db74">yellow     8   10      12     14
+</span><span style="color:#e6db74">white     12   14      16     18
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#其实就是横着加</span>
+<span style="color:#75715e">#如果有的标签只存在于是个数据结构中, 那么该列会生成nan</span>
+</code></pre></div><h2 id="函数应用和映射">函数应用和映射</h2>
+<h3 id="元素级函数">元素级函数</h3>
+<p>这类函数被称为通用函数, 对数据结构内的每一个元素进行操作, 其实大多数都是numpy里的内容.</p>
+<h3 id="按行或列操作的函数">按行或列操作的函数</h3>
+<p>apply方法(与numpy多维数组中的apply_along_axis几乎一样)可以对元素的每一列执行同一函数(这个函数甚至可以是自定义的)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>max() <span style="color:#f92672">-</span> x<span style="color:#f92672">.</span>min()) <span style="color:#75715e">#默认沿着0轴</span>
+frame<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>max() <span style="color:#f92672">-</span> x<span style="color:#f92672">.</span>min(), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#75715e">#沿着1轴</span>
+</code></pre></div><p>apply函数不仅可以返回标量, 也可以返回Series (要注意的是apply函数是对一行或列执行, 因此返回值总是升1维的, 也就是每行都返回一个标量会香橙Series, 每一行返回一个Series会形成DataFrame)</p>
+<h3 id="统计函数">统计函数</h3>
+<p>numpy的大多数统计函数对pandas中的对象仍然生效, 没有必要使用apply函数</p>
+<p>常用的有mean, sum等</p>
+<p><strong>describe</strong>方法可以返回多个统计量</p>
+<h2 id="排序与排位次">排序与排位次</h2>
+<ol>
+<li>
+<p>对标签或列排序</p>
+<p>sort_index方法返回一个顺序不同的新对象(Series, DataFrame通用)</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser<span style="color:#f92672">.</span>sort_index()
+ser<span style="color:#f92672">.</span>sort_index(ascending<span style="color:#f92672">=</span>False) <span style="color:#75715e">#降序</span>
+
+<span style="color:#75715e">#特殊地, 对于DataFrame, 可以通过axis指定列或index</span>
+frame<span style="color:#f92672">.</span>sort_index(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</code></pre></div><ol start="2">
+<li>
+<p>对值进行排序</p>
+<p>sort_values方法同样返回新对象</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser<span style="color:#f92672">.</span>sort_values()
+ser<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span>False)
+frame<span style="color:#f92672">.</span>sort_values(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pen&#39;</span>) <span style="color:#75715e">#指定按照pen列为标准排序</span>
+frame<span style="color:#f92672">.</span>sort_values(by<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;ball&#39;</span>]) <span style="color:#75715e"># 先看pen列, 若pen列已是顺序, 再看ball列. </span>
+<span style="color:#75715e">#同样也可基于更多列</span>
+</code></pre></div></li>
+<li>
+<p>排位次操作</p>
+<p>位次rank是排序的基石, 也就是说我们可以通过rank方法改变排序的结果</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser<span style="color:#f92672">.</span>rank() <span style="color:#75715e">#查看Series的rank值</span>
+ser<span style="color:#f92672">.</span>rank(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;first&#39;</span>) <span style="color:#75715e">#以当前位置定rank, 即当前顺序为标准顺序</span>
+ser<span style="color:#f92672">.</span>rank(ascending<span style="color:#f92672">=</span>False) <span style="color:#75715e">#按降序排位次</span>
+</code></pre></div></li>
+</ol>
+<h2 id="相关性和协方差">相关性和协方差</h2>
+<p>通过corr和cov函数计算两Series对象的相关性与协方差.</p>
+<p>调用DataFrame对象的corr或cov方法可计算单个DataFrame对象的相关性与协方差</p>
+<p>使用corrwith可计算DataFrame的行或列与Series对象的相关性</p>
+<h2 id="nan数据的处理">NaN数据的处理</h2>
+<ol>
+<li>
+<p>为元素赋NaN值, 使用np.nan或np.NaN</p>
+</li>
+<li>
+<p>dropna方法或使用过滤(使用notnull作为条件)可实现对nan的过滤</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ser<span style="color:#f92672">.</span>dropna()
+ser[ser<span style="color:#f92672">.</span>notnull()]
+<span style="color:#75715e">#对于DataFrame, 我们想要去除全部元素为nan的行或列(而不是有nan就删整行)</span>
+frame<span style="color:#f92672">.</span>dropna(how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>) <span style="color:#75715e">#只会删除全为nan的</span>
+</code></pre></div></li>
+<li>
+<p>为nan赋值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">frame<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>) <span style="color:#75715e">#为所有nan值赋0值</span>
+<span style="color:#75715e">#可是使用字典来为不同的nan赋不同值</span>
+frame<span style="color:#f92672">.</span>fillna({<span style="color:#e6db74">&#39;ball&#39;</span>:<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;mug&#39;</span>:<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;pen&#39;</span>:<span style="color:#ae81ff">99</span>}) <span style="color:#75715e">#不同列的nan会被替换为相应的值</span>
+</code></pre></div></li>
+</ol>
+<h2 id="等级索引和分级">等级索引和分级</h2>
+<ol>
+<li>等级索引是pandas的重要功能, 单条轴可以有多级索引, 可以实现像操作两维结构那样操作多维结构</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mser <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(<span style="color:#ae81ff">8</span>), 
+                 index<span style="color:#f92672">=</span>[[<span style="color:#e6db74">&#39;white&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>], [<span style="color:#e6db74">&#39;up&#39;</span>, <span style="color:#e6db74">&#39;down&#39;</span>, <span style="color:#e6db74">&#39;right&#39;</span>, <span style="color:#e6db74">&#39;up&#39;</span>, <span style="color:#e6db74">&#39;down&#39;</span>, <span style="color:#e6db74">&#39;up&#39;</span>, <span style="color:#e6db74">&#39;down&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>]])
+<span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">white  up       0.465747
+</span><span style="color:#e6db74">       down     0.318715
+</span><span style="color:#e6db74">       right    0.576776
+</span><span style="color:#e6db74">blue   up       0.975598
+</span><span style="color:#e6db74">       down     0.593504
+</span><span style="color:#e6db74">red    up       0.491182
+</span><span style="color:#e6db74">       down     0.854766
+</span><span style="color:#e6db74">       left     0.194188
+</span><span style="color:#e6db74">dtype: float64
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#75715e">#对于DataFrame可以对其行与列均定义登记索引</span>
+</code></pre></div><ol start="2">
+<li>等级索引的基本操作</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mser[<span style="color:#e6db74">&#39;white&#39;</span>]
+mser[:,<span style="color:#e6db74">&#39;up&#39;</span>]
+mser[<span style="color:#e6db74">&#39;white&#39;</span>:<span style="color:#e6db74">&#39;up&#39;</span>]
+
+<span style="color:#75715e">#unstack方法, 将等级索引Series转化为DataFrame</span>
+<span style="color:#75715e">#stack方法, 将DataFrame转化为等级索引的Series对象</span>
+</code></pre></div><ol start="3">
+<li>新调整顺序</li>
+</ol>
+<p>​       swaplevel方法可以互换两个层级, <strong>以层级的名称为参数!!!!!! 名称是index和columns的name属性!!!!!</strong></p>
+<p>​       sort_index方法可以通过传参数level(同样接收name)来制定对哪个层级将数据排序</p>
+<ol start="4">
+<li>
+<p>按层级统计数据</p>
+<p>对函数传level参数指定层级名称即可</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mframe<span style="color:#f92672">.</span>sum(level<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;colors&#39;</span>)
+mframe<span style="color:#f92672">.</span>sum(level<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;colors&#39;</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</code></pre></div></li>
+</ol>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/2.-data-analysis/" title="2. Data Analysis"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/" title="Numpy基础" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1619591173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619591173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619591173"></script>
+    <script src="/js/jquery.sticky.js?1619591173"></script>
+    <script src="/js/featherlight.min.js?1619591173"></script>
+    <script src="/js/highlight.pack.js?1619591173"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619591173"></script>
+    <script src="/js/learn.js?1619591173"></script>
+    <script src="/js/hugo-learn.js?1619591173"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1619591173"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

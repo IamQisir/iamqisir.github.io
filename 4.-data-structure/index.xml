@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4. Data Structure on QiBlog</title>
+    <link>https://iamqisir.github.io/4.-data-structure/</link>
+    <description>Recent content in 4. Data Structure on QiBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Apr 2021 13:35:47 +0800</lastBuildDate><atom:link href="https://iamqisir.github.io/4.-data-structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>栈</title>
+      <link>https://iamqisir.github.io/4.-data-structure/%E6%A0%88/</link>
+      <pubDate>Wed, 28 Apr 2021 13:36:29 +0800</pubDate>
+      
+      <guid>https://iamqisir.github.io/4.-data-structure/%E6%A0%88/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

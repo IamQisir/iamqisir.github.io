@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2. Data Analysis on QiBlog</title>
+    <link>https://iamqisir.github.io/2.-data-analysis/</link>
+    <description>Recent content in 2. Data Analysis on QiBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Apr 2021 13:23:59 +0800</lastBuildDate><atom:link href="https://iamqisir.github.io/2.-data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pandas基础</title>
+      <link>https://iamqisir.github.io/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 28 Apr 2021 13:02:01 +0800</pubDate>
+      
+      <guid>https://iamqisir.github.io/2.-data-analysis/pandas%E5%9F%BA%E7%A1%80/</guid>
+      <description>Basic knowledge of Pandas 正在施工，有很多地方正待完善
+pandas库是以numpy库为基础建成的，是python数据分析的核心库。也正因如此，pandas内的数据结构与numpy的数组有许多相似的地方。
+以下的代码示例均是在引入numpy和pandas库的基础上，不要忘记！
+Pandas库数据结构简介 Series对象 Series对象用来存放一维数据，由两个相互关联的数组组成。index数组存放索引（令人惊喜的是，索引可以有重复），values数组存放值。其实index对象使得操作Series和DataFrame十分方便（后面会单独拿出来一节将index对象）, 而且Series内的元素类型可以不同! 将自动生成新的数据类型! (NAN自动变化那个是什么情况?)
+声明Series对象 #使用序列创建Series对象 s = pd.Series([1, 2, 3]) s = pd.Series((1, 2, 3)) s = pd.Series(range(0, 6)) #别忘记range也是一种序列对象 # 最常用的情况之一, 使用ndarray创建Series对象 s = pd.Series(np.arange(0, 6)) # 一种特殊情况 pd.Series(22, index=list(range(1, 10))) #会自动补成一样的长度，很像广播机制 # 那两者长度不相同, 但都不为1呢? 会报错!!! 想想广播机制！！！ #使用字典创建Series对象 这是十分重要的构造方法 dict = {&amp;#39;red&amp;#39;: 2000, &amp;#39;blue&amp;#39;: 1000, &amp;#39;orange&amp;#39;: 5000} s = pd.Series(dict) # 传入索引并自定义索引 --- 自定义索引会成为最终索引, 原字典里没有的将成为缺失值 #重复的index! 如下所示: red会取原来的值, 而其他原字典里没有的, 对应的值都是NAN(还是浮点类型)!</description>
+    </item>
+    
+    <item>
+      <title>Numpy基础</title>
+      <link>https://iamqisir.github.io/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 28 Apr 2021 13:01:55 +0800</pubDate>
+      
+      <guid>https://iamqisir.github.io/2.-data-analysis/numpy%E5%9F%BA%E7%A1%80/</guid>
+      <description>Basic Numpy 正在施工，有很多地方正待完善
+ndarray对象基础 什么是ndarray对象？即是N-dimentional array，也就是n维数组对象。
+指定ndarray类型的对象——dtype（data type，就是n维数组对象内的基本元素类型）
+numpy数组的基本知识 数组的基本属性  shape属性，即是数组的形状，用元组来描述（储存着几行几列的信息） axis属性，即是数组的轴，有0、1、2……轴（在参数列表中的axis代表着以哪个轴作为基准） ndim属性，即是数组的维数，用元组来表示（其实就是反映数组有几个轴） size属性，返回数组的长度（就是看数组里面一共有多少基本元素，不要与len()函数返回值混淆，len与ndim返回值一致） dtype属性，即是数组元素的类型（也可以在外面直接创造复杂dtype类型，并把它与一个变量绑定，可以节省代码量） itemsize属性，即是数组中每个元素的长度（以字节形式表示）   数据类型（主要在结构化数组中应用） 全部数据类型 见 Python Data Analysis P34，不过一般很少使用
+结构化数组中的数据类型    bytes b1     int i1, i2, i4, i8   usigned ints u1, u2, u4, u8   floats f2, f4, f8   complex c8, c16   fixed length strings a    可以通过type函数来查看元素类型或查看ndarray的dtype属性</description>
+    </item>
+    
+  </channel>
+</rss>
