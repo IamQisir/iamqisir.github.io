@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>数据分析基础 on QiBlog</title>
+    <title>QiBlog</title>
     <link>https://iamqisir.github.io/</link>
-    <description>Recent content in 数据分析基础 on QiBlog</description>
+    <description>Recent content on QiBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Apr 2021 13:36:29 +0800</lastBuildDate><atom:link href="https://iamqisir.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 22:00:15 +0800</lastBuildDate><atom:link href="https://iamqisir.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://iamqisir.github.io/5.-test/test/</link>
+      <pubDate>Wed, 10 Nov 2021 22:00:15 +0800</pubDate>
+      
+      <guid>https://iamqisir.github.io/5.-test/test/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>栈</title>
       <link>https://iamqisir.github.io/4.-data-structure/%E6%A0%88/</link>
